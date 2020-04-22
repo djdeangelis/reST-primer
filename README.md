@@ -1,1 +1,1 @@
-# sphinx-example
+# sphinx example project
