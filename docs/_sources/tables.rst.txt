@@ -1,0 +1,162 @@
+Tables
+======
+
+Simple table
+------------
+A `simple table <https://docutils.sourceforge.io/docs/ref/rst/restructuredtext.html#simple-tables>`_ is compact and easy to construct, and is best suited for displaying simple data sets. To consuct a simple table:
+
+* Define the horizontal borders with the ``=`` and ``-`` characters.
+
+	* The ``=`` character is used for top and bottom table borders, and to separate optional header rows from the table body. 
+	* The ``-`` character is used to indicate column spans in a single row by underlining the joined columns, and may optionally be used to separate rows.
+
+* Regardless of spans, the top border must fully describe all table columns and there must be at least two columns.
+* Blank lines are required before and after the table. 
+* Left edges should align with the left edge of the preceding text blocks. If indented, the table is considered to be part of a block quote.
+
+Examples
+********
+
+.. highlight:: none
+
+The simple table shown below includes three columns, one header row, and four body rows. ::
+
+	=====  =====  =======
+  	  A      B    A and B
+	=====  =====  =======
+	False  False  False
+	True   False  False
+	False  True   False
+	True   True   True
+	=====  =====  =======
+
+It is rendered as
+
+=====  =====  =======
+  A      B    A and B
+=====  =====  =======
+False  False  False
+True   False  False
+False  True   False
+True   True   True
+=====  =====  =======
+
+The simple table shown below extends the previous example by adding a column span and another header row. ::
+
+	=====  =====  ======
+	   Inputs     Output
+	------------  ------
+	  A      B    A or B
+	=====  =====  ======
+	False  False  False
+	True   False  True
+	False  True   True
+	True   True   True
+	=====  =====  ======
+
+It is rendered as
+
+=====  =====  ======
+   Inputs     Output
+------------  ------
+  A      B    A or B
+=====  =====  ======
+False  False  False
+True   False  True
+False  True   True
+True   True   True
+=====  =====  ======
+
+.. highlight:: default
+
+Grid table
+----------
+A `grid table <https://docutils.sourceforge.io/docs/ref/rst/restructuredtext.html#grid-tables>`_ provides a complete table representation via grid-like "ASCII art". Grid tables allow arbitrary cell contents, and both row and column spans. However, grid tables can be cumbersome to produce, especially for simple data sets. To construct a grid table:
+
+* Define the grid using the  ``-``, ``=``, ``|``, and ``+`` characters. 
+
+	* The ``-`` character is used for horizontal lines (row separators). 
+	* The ``=`` character may be used to separate optional header rows from the table body. 
+	* The ``|`` character is used for vertical lines (column separators). 
+	* The ``+`` character is used for intersections of horizontal and vertical lines.
+
+* Blank lines are required before and after the table. 
+* Left edges should align with the left edge of the preceding text blocks. If indented, the table is considered to be part of a block quote.
+
+Examples
+********
+In the simplest case, a grid table is not required to have headers. ::
+
+	+-----------+-----------+
+	| cell 1,1  | cell 1,2  |
+	+-----------+-----------+
+	| cell 2,1  | cell 2,2  |
+	+-----------+-----------+
+
+It is rendered as
+
++-----------+-----------+
+| cell 1,1  | cell 1,2  |
++-----------+-----------+
+| cell 2,1  | cell 2,2  |
++-----------+-----------+
+
+The grid table shown below includes a heading row, 4 body rows, 3 columns, a column span, a row span, and a content block. ::
+
+	+------------+------------+-----------+
+	| Header 1   | Header 2   | Header 3  |
+	+============+============+===========+
+	| body row 1 | column 2   | column 3  |
+	+------------+------------+-----------+
+	| body row 2 | Cells may span columns.|
+	+------------+------------+-----------+
+	| body row 3 | Cells may  | - Cells   |
+	+------------+ span rows. | - contain |
+	| body row 4 |            | - blocks. |
+	+------------+------------+-----------+
+
+It is rendered as
+
++------------+------------+-----------+
+| Header 1   | Header 2   | Header 3  |
++============+============+===========+
+| body row 1 | column 2   | column 3  |
++------------+------------+-----------+
+| body row 2 | Cells may span columns.|
++------------+------------+-----------+
+| body row 3 | Cells may  | - Cells   |
++------------+ span rows. | - contain |
+| body row 4 |            | - blocks. |
++------------+------------+-----------+
+
+You can include a table caption with the ``table`` directive. ::
+
+	.. table:: A grid table representation
+
+	+------------+------------+-----------+
+	| Header 1   | Header 2   | Header 3  |
+	+============+============+===========+
+	| body row 1 | column 2   | column 3  |
+	+------------+------------+-----------+
+	| body row 2 | Cells may span columns.|
+	+------------+------------+-----------+
+	| body row 3 | Cells may  | - Cells   |
+	+------------+ span rows. | - contain |
+	| body row 4 |            | - blocks. |
+	+------------+------------+-----------+
+
+It is rendered as
+
+.. table:: A grid table representation
+
+   +------------+------------+-----------+
+   | Header 1   | Header 2   | Header 3  |
+   +============+============+===========+
+   | body row 1 | column 2   | column 3  |
+   +------------+------------+-----------+
+   | body row 2 | Cells may span columns.|
+   +------------+------------+-----------+
+   | body row 3 | Cells may  | - Cells   |
+   +------------+ span rows. | - contain |
+   | body row 4 |            | - blocks. |
+   +------------+------------+-----------+

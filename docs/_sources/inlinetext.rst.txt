@@ -1,0 +1,37 @@
+Inline markup
+=============
+
+`Inline markup <https://docutils.sourceforge.io/docs/ref/rst/restructuredtext.html#inline-markup>`_ allows words and phrases within text to have character 
+styles (e.g. italics and boldface) and functionality (e.g. hyperlinks). 
+
+Be aware of some restrictions of this markup:
+
+* It may not be nested.
+* Content may not start or end with whitespace: \* text\* is wrong.
+
+
+There are nine inline markup constructs. The five most common are given below.
+
+======================  ===================  ======================================
+Text                    Rendered result      Descripion
+======================  ===================  ======================================
+\*emphasis\*            *emphasis*           Normally rendered as italics.
+----------------------  -------------------  --------------------------------------
+\*\*strong\*\*          **strong**           Normally rendered as bold.
+----------------------  -------------------  --------------------------------------
+\`\`literal\`\`         ``literal``          Normally rendered as monospaced text; typically used for code samples
+----------------------  -------------------  --------------------------------------
+reference\_             reference_           A one-word hyperlink reference
+----------------------  -------------------  --------------------------------------
+\`phrase reference\`\_  `Inline markup`_     A multi-word hyperlink reference
+======================  ===================  ======================================
+
+Escaping characters
+-------------------
+If you want to display a character with its normal meaning, which would otherwise create inline markup, you must escape the character by prepending it 
+with a backslash (\\).
+
+For example, to show how to specify the appropriate markup characters for the emphasis and strong constructs dsplayed above, you include a backslash before each markup character.
+
+* Emphasis construct - Type \\\*emphasis\\\*, which renders as \*emphasis\* instead of *emphasis*. 
+* Strong construct - Type \\\*\\\*strong\\\*\\\*, which renders as \*\*strong\*\* instead of **strong**.

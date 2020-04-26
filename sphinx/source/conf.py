@@ -17,7 +17,7 @@
 
 # -- Project information -----------------------------------------------------
 
-project = 'Sphinx Example Project'
+project = 'reStructuredText Primer'
 copyright = '2020, D. J. DeAngelis'
 author = 'D. J. DeAngelis'
 
@@ -32,8 +32,8 @@ release = '0.0.1'
 # ones.
 # import sphinx_rtd_theme
 # extensions = ["sphinx_rtd_theme"]
-
 extensions = [
+    'sphinx_rtd_theme',
 ]
 
 # Add any paths that contain templates here, relative to this directory.

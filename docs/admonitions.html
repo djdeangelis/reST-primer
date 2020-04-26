@@ -1,0 +1,295 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Admonitions &mdash; reStructuredText Primer 0.0.1 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+        <script src="_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="prev" title="Images and Figures" href="images.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="index.html" class="icon icon-home"> reStructuredText Primer
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="sections.html">Sections and Transitions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="paragraphs.html">Paragraphs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="inlinetext.html">Inline markup</a></li>
+<li class="toctree-l1"><a class="reference internal" href="lists.html">Lists</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tables.html">Tables</a></li>
+<li class="toctree-l1"><a class="reference internal" href="images.html">Images and Figures</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Admonitions</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#examples">Examples</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#generic-admonitions">Generic admonitions</a></li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">reStructuredText Primer</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html">Docs</a> &raquo;</li>
+        
+      <li>Admonitions</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="_sources/admonitions.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="admonitions">
+<h1>Admonitions<a class="headerlink" href="#admonitions" title="Permalink to this headline">¶</a></h1>
+<p><a class="reference external" href="https://docutils.sourceforge.io/0.3/spec/rst/directives.html#admonitions">Admonitions</a> are specially marked topics that can appear
+anywhere in your document as an ordinary body element. Any text immediately following the directive indicator (on the same line or indented
+on following lines) is interpreted as a directive block and is parsed for normal body elements. Typically, an admonition is rendered as an
+offset block in a document, sometimes outlined or shaded, with a title matching the admonition type.</p>
+<p>The following admonition directives are supported:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">attention</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">caution</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">danger</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">error</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">hint</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">important</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">note</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">tip</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">warning</span></code></p></li>
+</ul>
+<div class="section" id="examples">
+<h2>Examples<a class="headerlink" href="#examples" title="Permalink to this headline">¶</a></h2>
+<p>The following <code class="docutils literal notranslate"><span class="pre">note</span></code> admonition directive contains multiple paragraphs.</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>.. note:: Use a note for information you want the user to pay particular attention to.
+
+   If note text runs over a line, make sure the lines wrap and are indented to
+   the same level as the note tag. If formatting is incorrect, part of the note
+   might not render in the HTML output.
+
+   Notes can have more than one paragraph. Successive paragraphs must indent to
+   the same level as the rest of the note.
+</pre></div>
+</div>
+<p>It is rendered as</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Use a note for information you want the user to pay particular attention to.</p>
+<p>If note text runs over a line, make sure the lines wrap and are indented to
+the same level as the note tag. If formatting is incorrect, part of the note
+might not render in the HTML output.</p>
+<p>Notes can have more than one paragraph. Successive paragraphs mustindent to
+the same level as the rest of the note.</p>
+</div>
+<p>The following <code class="docutils literal notranslate"><span class="pre">warning</span></code> admonition directive contains an unordered list.</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>.. warning:: Use a warning for information the user must understand to avoid negative consequences.
+
+   You can include any body element in the admonition such as an unordered list.
+
+   * First list item.
+   * Second list item.
+</pre></div>
+</div>
+<p>It is rendered as</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Use a warning for information the user must understand to avoid negative consequences.</p>
+<p>You can include any body element in the admonition such as an unordered list.</p>
+<ul class="simple">
+<li><p>First list item.</p></li>
+<li><p>Second list item.</p></li>
+</ul>
+</div>
+</div>
+<div class="section" id="generic-admonitions">
+<h2>Generic admonitions<a class="headerlink" href="#generic-admonitions" title="Permalink to this headline">¶</a></h2>
+<p>You can create a <a class="reference external" href="https://docutils.sourceforge.io/0.3/spec/rst/directives.html#generic-admonition">generic admonition</a> with the <code class="docutils literal notranslate"><span class="pre">admonition</span></code> directive. The title of the admonition is specified after the directive.</p>
+<p>The following generic admonition it titled “RTFM”.</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>.. admonition:: RTFM
+
+   Read the flipping manual!
+</pre></div>
+</div>
+<p>It is rendered as</p>
+<div class="admonition-rtfm admonition">
+<p class="admonition-title">RTFM</p>
+<p>Read the flipping manual!</p>
+</div>
+<p>The admonition title is used as a class attribute value after being converted into a valid identifier form (down cased, non-alphanumeric
+characters converted to single hyphens, and “admonition-” prefixed) as illustrated by the following document tree pseudo-XML</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>&lt;document source=&quot;test data&quot;&gt;
+&lt;admonition class=&quot;admonition-rtfm&quot;&gt;
+    &lt;title&gt;
+        RTFM
+    &lt;paragraph&gt;
+        You should read the flipping manual!
+</pre></div>
+</div>
+<p>You can then include the class in the admonition using the <code class="docutils literal notranslate"><span class="pre">:class:</span></code> specifier.</p>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+      
+        <a href="images.html" class="btn btn-neutral float-left" title="Images and Figures" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2020, D. J. DeAngelis
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

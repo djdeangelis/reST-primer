@@ -1,0 +1,367 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Lists &mdash; reStructuredText Primer 0.0.1 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+        <script src="_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Tables" href="tables.html" />
+    <link rel="prev" title="Inline markup" href="inlinetext.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="index.html" class="icon icon-home"> reStructuredText Primer
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="paragraphs.html">Paragraphs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="sections.html">Sections</a></li>
+<li class="toctree-l1"><a class="reference internal" href="inlinetext.html">Inline markup</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Lists</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#unordered-lists">Unordered lists</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#example">Example</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#ordered-lists">Ordered lists</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id1">Example</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#definition-list">Definition list</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id2">Example</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="tables.html">Tables</a></li>
+<li class="toctree-l1"><a class="reference internal" href="images.html">Images and Figures</a></li>
+<li class="toctree-l1"><a class="reference internal" href="admonitions.html">Admonitions</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">reStructuredText Primer</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html">Docs</a> &raquo;</li>
+        
+      <li>Lists</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="_sources/lists.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="lists">
+<h1>Lists<a class="headerlink" href="#lists" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="unordered-lists">
+<h2>Unordered lists<a class="headerlink" href="#unordered-lists" title="Permalink to this headline">¶</a></h2>
+<p>To create an unordered (bulleted) list:</p>
+<ul class="simple">
+<li><p>Use the symbols <code class="docutils literal notranslate"><span class="pre">*</span></code>, <code class="docutils literal notranslate"><span class="pre">+</span></code>, or <code class="docutils literal notranslate"><span class="pre">-</span></code> followed by at least one space. These are the standard markdown list symbols, but reST supports others as described in the specification.</p></li>
+<li><p>Keep the indentation of the text of the first line in subsequents lines.</p></li>
+<li><p>Create sub-levels by indenting list items by at least four spaces.</p></li>
+<li><p>The choice of symbol does not affect the output list style, which is determined solely by the indent level.</p></li>
+<li><p>A blank line is required before the first item and after the last item in the list, but is optional between items. This requirement also applies to sub-levels because they are new lists.</p></li>
+<li><p>Include additional paragraphs of item text after a blank line and with the same indentation.</p></li>
+</ul>
+<p>Refer to <a class="reference external" href="https://docutils.sourceforge.io/docs/ref/rst/restructuredtext.html#bullet-lists">bullet lists</a> in the reST specification for more information.</p>
+<div class="section" id="example">
+<h3>Example<a class="headerlink" href="#example" title="Permalink to this headline">¶</a></h3>
+<p>The following unordered list</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">*</span> <span class="n">Lorem</span> <span class="n">ipsum</span> <span class="n">dolor</span> <span class="n">sit</span> <span class="n">amet</span><span class="p">,</span> <span class="n">consectetur</span> <span class="n">adipiscing</span> <span class="n">elit</span><span class="o">.</span>
+<span class="o">*</span> <span class="n">Nullam</span> <span class="n">eu</span> <span class="n">ligula</span> <span class="n">a</span> <span class="n">nunc</span> <span class="n">volutpat</span> <span class="n">rutrum</span><span class="o">.</span>
+
+        <span class="o">+</span> <span class="n">Vestibulum</span> <span class="n">placerat</span> <span class="n">lacinia</span> <span class="n">nibh</span><span class="o">.</span>
+        <span class="o">+</span> <span class="n">Donec</span> <span class="n">suscipit</span> <span class="n">eu</span> <span class="n">metus</span> <span class="n">sed</span> <span class="n">porttitor</span><span class="o">.</span>
+
+                <span class="o">*</span> <span class="n">Nunc</span> <span class="n">arcu</span> <span class="n">neque</span><span class="o">.</span>
+                <span class="o">*</span> <span class="n">Donec</span> <span class="n">sed</span> <span class="n">lobortis</span> <span class="n">odio</span><span class="o">.</span>
+
+<span class="o">-</span> <span class="n">Aenean</span> <span class="n">eget</span> <span class="n">sapien</span> <span class="n">ligula</span><span class="o">.</span>
+
+  <span class="n">Vivamus</span> <span class="n">hendrerit</span> <span class="n">sem</span> <span class="n">nunc</span><span class="p">,</span> <span class="n">sed</span> <span class="n">tincidunt</span> <span class="n">lorem</span> <span class="n">volutpat</span> <span class="n">venenatis</span><span class="o">.</span>
+  <span class="n">Quisque</span> <span class="n">porttitor</span> <span class="n">nulla</span> <span class="n">neque</span><span class="p">,</span> <span class="n">sed</span> <span class="n">congue</span> <span class="n">nulla</span> <span class="n">dictum</span> <span class="n">ut</span><span class="o">.</span>
+</pre></div>
+</div>
+<p>Is displayed as</p>
+<ul>
+<li><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p></li>
+<li><p>Nullam eu ligula a nunc volutpat rutrum.</p>
+<blockquote>
+<div><ul>
+<li><p>Vestibulum placerat lacinia nibh.</p></li>
+<li><p>Donec suscipit eu metus sed porttitor.</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>Nunc arcu neque.</p></li>
+<li><p>Donec sed lobortis odio.</p></li>
+</ul>
+</div></blockquote>
+</li>
+</ul>
+</div></blockquote>
+</li>
+</ul>
+<ul>
+<li><p>Aenean eget sapien ligula.</p>
+<p>Vivamus hendrerit sem nunc, sed tincidunt lorem volutpat venenatis.
+Quisque porttitor nulla neque, sed congue nulla dictum ut.</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="section" id="ordered-lists">
+<h2>Ordered lists<a class="headerlink" href="#ordered-lists" title="Permalink to this headline">¶</a></h2>
+<p>To create an ordered (enumerated) list:</p>
+<ul class="simple">
+<li><p>Use numerals <code class="docutils literal notranslate"><span class="pre">1,</span> <span class="pre">2,</span> <span class="pre">3,</span> <span class="pre">...</span></code>, alphabetic characters upper case <code class="docutils literal notranslate"><span class="pre">A,</span> <span class="pre">B,</span> <span class="pre">C,</span> <span class="pre">...</span></code> or lower case <code class="docutils literal notranslate"><span class="pre">a,</span> <span class="pre">b,</span> <span class="pre">c,</span> <span class="pre">...</span></code>, or roman numerals upper case <code class="docutils literal notranslate"><span class="pre">I,</span> <span class="pre">II,</span> <span class="pre">III,</span> <span class="pre">...</span></code> or lower case <code class="docutils literal notranslate"><span class="pre">i,</span> <span class="pre">ii,</span> <span class="pre">iii,</span> <span class="pre">...</span></code>. You can also auto-enumerate lists using the hash symbol <code class="docutils literal notranslate"><span class="pre">#</span></code>.</p></li>
+<li><p>Specify a formatting type followed by at least one space. The formatting types include a period <code class="docutils literal notranslate"><span class="pre">1.,</span> <span class="pre">A.,</span> <span class="pre">a.,</span> <span class="pre">I.,</span> <span class="pre">i.</span></code>, parentheses <code class="docutils literal notranslate"><span class="pre">(1),</span> <span class="pre">(A),</span> <span class="pre">(a),</span> <span class="pre">(I),</span> <span class="pre">(i)</span></code>, and a right-parenthesis <code class="docutils literal notranslate"><span class="pre">1),</span> <span class="pre">A),</span> <span class="pre">a),</span> <span class="pre">I),</span> <span class="pre">i)</span></code>.</p></li>
+<li><p>A new list is started when an enumerator is encountered that does not have the same format and sequence type as the current list (e.g. <code class="docutils literal notranslate"><span class="pre">1.,</span> <span class="pre">(a)</span></code>), or the enumerators are not in sequence (e.g. <code class="docutils literal notranslate"><span class="pre">1.,</span> <span class="pre">3.</span></code>).</p></li>
+<li><p>Include blank lines consistent with the unordered list rules.</p></li>
+</ul>
+<p>Refer to <a class="reference external" href="https://docutils.sourceforge.io/docs/ref/rst/restructuredtext.html#enumerated-lists">enumerated lists</a> in the reST specification for more information.</p>
+<div class="section" id="id1">
+<h3>Example<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h3>
+<p>The following ordered list</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>1. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+2. Nullam eu ligula a nunc volutpat rutrum.
+
+        (A) Vestibulum placerat lacinia nibh.
+        (B) Donec suscipit eu metus sed porttitor.
+
+                a) Nunc arcu neque.
+                b) Donec sed lobortis odio.
+
+#. Aenean eget sapien ligula.
+
+  Vivamus hendrerit sem nunc, sed tincidunt lorem volutpat venenatis.
+  Quisque porttitor nulla neque, sed congue nulla dictum ut.
+</pre></div>
+</div>
+<p>Is displayed as</p>
+<ol class="arabic">
+<li><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p></li>
+<li><p>Nullam eu ligula a nunc volutpat rutrum.</p>
+<blockquote>
+<div><ol class="upperalpha">
+<li><p>Vestibulum placerat lacinia nibh.</p></li>
+<li><p>Donec suscipit eu metus sed porttitor.</p>
+<blockquote>
+<div><ol class="loweralpha simple">
+<li><p>Nunc arcu neque.</p></li>
+<li><p>Donec sed lobortis odio.</p></li>
+</ol>
+</div></blockquote>
+</li>
+</ol>
+</div></blockquote>
+</li>
+<li><p>Aenean eget sapien ligula.</p></li>
+</ol>
+<blockquote>
+<div><p>Vivamus hendrerit sem nunc, sed tincidunt lorem volutpat venenatis.
+Quisque porttitor nulla neque, sed congue nulla dictum ut.</p>
+</div></blockquote>
+</div>
+</div>
+<div class="section" id="definition-list">
+<h2>Definition list<a class="headerlink" href="#definition-list" title="Permalink to this headline">¶</a></h2>
+<p>A definition list associates terms with their definitions and is a convenient way to create a glossary. When creating a definition list:</p>
+<ul class="simple">
+<li><p>Each term is a one-line phrase.</p></li>
+<li><p>The definition is one or more paragraphs or body elements, indented relative to the term.</p></li>
+<li><p>Blank lines are not allowed between term and definition.</p></li>
+<li><p>Blank lines are required before the first and after the last definition list item, but are optional between list items.</p></li>
+</ul>
+<p>Refer to <a class="reference external" href="https://docutils.sourceforge.io/docs/ref/rst/restructuredtext.html#definition-lists">definition lists</a> in the reST specification for more information.</p>
+<div class="section" id="id2">
+<h3>Example<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h3>
+<p>The following definition list</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>what
+        Definition lists associate a term with a definition.
+how
+        The term is a one-line phrase, and the definition is one or more paragraphs or
+        body elements, indented relative to the term.
+
+        Blank lines are not allowed between term and definition.
+</pre></div>
+</div>
+<p>Is displayed as</p>
+<dl>
+<dt>what</dt><dd><p>Definition lists associate a term with a definition.</p>
+</dd>
+<dt>how</dt><dd><p>The term is a one-line phrase, and the definition is one or more paragraphs or
+body elements, indented relative to the term.</p>
+<p>Blank lines are not allowed between term and definition.</p>
+</dd>
+</dl>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="tables.html" class="btn btn-neutral float-right" title="Tables" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="inlinetext.html" class="btn btn-neutral float-left" title="Inline markup" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2020, D. J. DeAngelis
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

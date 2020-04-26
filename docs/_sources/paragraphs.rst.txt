@@ -1,0 +1,38 @@
+Paragraphs
+==========
+`Paragraphs <https://docutils.sourceforge.io/docs/ref/rst/restructuredtext.html#paragraphs>`_ consist of blocks of left-aligned text with no markup indicating any other body element. Blank lines separate paragraphs from each other and from other body elements. Paragraphs may contain inline markup.
+
+.. highlight:: none
+
+Two paragraphs are shown below separated by a blank line. ::
+
+	Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras dignissim auctor semper. 
+	Pellentesque dolor turpis, bibendum ac justo ac, sollicitudin condimentum elit. 
+	Sed suscipit vulputate ultricies. 
+
+	In porta ipsum in ligula auctor, dictum gravida ante vulputate. Suspendisse id urna scelerisque, 
+	facilisis lacus at, consequat ipsum. Pellentesque nunc ipsum vestibulum luctus purus.
+
+To add more vertical space between paragraphs, insert a pipe character (\|) ::
+
+	Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras dignissim auctor semper. 
+	Pellentesque dolor turpis, bibendum ac justo ac, sollicitudin condimentum elit. 
+	Sed suscipit vulputate ultricies.
+	
+	|
+	
+	In porta ipsum in ligula auctor, dictum gravida ante vulputate. Suspendisse id urna scelerisque, 
+	facilisis lacus at, consequat ipsum. Pellentesque nunc ipsum vestibulum luctus purus.
+
+.. highlight:: default
+
+Which renders as
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras dignissim auctor semper. 
+Pellentesque dolor turpis, bibendum ac justo ac, sollicitudin condimentum elit. 
+Sed suscipit vulputate ultricies.
+
+|
+
+In porta ipsum in ligula auctor, dictum gravida ante vulputate. Suspendisse id urna scelerisque, 
+facilisis lacus at, consequat ipsum. Pellentesque nunc ipsum vestibulum luctus purus.

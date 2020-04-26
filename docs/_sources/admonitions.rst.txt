@@ -1,0 +1,93 @@
+Admonitions
+===========
+`Admonitions <https://docutils.sourceforge.io/0.3/spec/rst/directives.html#admonitions>`_ are specially marked topics that can appear 
+anywhere in your document as an ordinary body element. Any text immediately following the directive indicator (on the same line or indented 
+on following lines) is interpreted as a directive block and is parsed for normal body elements. Typically, an admonition is rendered as an 
+offset block in a document, sometimes outlined or shaded, with a title matching the admonition type.
+
+The following admonition directives are supported:
+
+* ``attention``
+* ``caution``
+* ``danger``
+* ``error``
+* ``hint``
+* ``important``
+* ``note``
+* ``tip``
+* ``warning``
+
+.. highlight:: none
+
+Examples
+********
+The following ``note`` admonition directive contains multiple paragraphs. ::
+
+	.. note:: Use a note for information you want the user to pay particular attention to.
+
+	   If note text runs over a line, make sure the lines wrap and are indented to
+	   the same level as the note tag. If formatting is incorrect, part of the note
+	   might not render in the HTML output.
+
+	   Notes can have more than one paragraph. Successive paragraphs must indent to 
+	   the same level as the rest of the note.
+
+It is rendered as
+
+.. note:: Use a note for information you want the user to pay particular attention to.
+
+   If note text runs over a line, make sure the lines wrap and are indented to
+   the same level as the note tag. If formatting is incorrect, part of the note
+   might not render in the HTML output.
+
+   Notes can have more than one paragraph. Successive paragraphs mustindent to 
+   the same level as the rest of the note.
+
+The following ``warning`` admonition directive contains an unordered list. ::
+
+	.. warning:: Use a warning for information the user must understand to avoid negative consequences.
+		
+	   You can include any body element in the admonition such as an unordered list.
+
+	   * First list item.
+	   * Second list item.
+
+It is rendered as
+
+.. warning:: Use a warning for information the user must understand to avoid negative consequences.
+		
+   You can include any body element in the admonition such as an unordered list.
+
+   * First list item.
+   * Second list item.
+
+Generic admonitions
+*******************
+You can create a `generic admonition <https://docutils.sourceforge.io/0.3/spec/rst/directives.html#generic-admonition>`_ with the ``admonition`` directive. The title of the admonition is specified after the directive. 
+
+The following generic admonition it titled "RTFM". ::
+
+	.. admonition:: RTFM
+
+   	   Read the flipping manual!
+
+It is rendered as
+
+.. admonition:: RTFM
+
+   Read the flipping manual!
+
+The admonition title is used as a class attribute value after being converted into a valid identifier form (down cased, non-alphanumeric 
+characters converted to single hyphens, and "admonition-" prefixed) as illustrated by the following document tree pseudo-XML ::
+
+	<document source="test data">
+        <admonition class="admonition-rtfm">
+            <title>
+                RTFM
+            <paragraph>
+                You should read the flipping manual!
+
+
+You can then include the class in the admonition using the ``:class:`` specifier.
+
+.. highlight:: default

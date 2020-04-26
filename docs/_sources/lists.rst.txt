@@ -1,0 +1,137 @@
+Lists
+=====
+
+Unordered lists
+---------------
+To create an unordered (bulleted) list:
+
+* Use the symbols ``*``, ``+``, or ``-`` followed by at least one space. These are the standard markdown list symbols, but reST supports others as described in the specification. 
+* Keep the indentation of the text of the first line in subsequents lines.
+* Create sub-levels by indenting list items by at least four spaces.
+* The choice of symbol does not affect the output list style, which is determined solely by the indent level. 
+* A blank line is required before the first item and after the last item in the list, but is optional between items. This requirement also applies to sub-levels because they are new lists.
+* Include additional paragraphs of item text after a blank line and with the same indentation.
+
+Refer to `bullet lists <https://docutils.sourceforge.io/docs/ref/rst/restructuredtext.html#bullet-lists>`_ in the reST specification for more information.
+
+Example
+*******
+The following unordered list ::
+
+	* Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+	* Nullam eu ligula a nunc volutpat rutrum.
+
+		+ Vestibulum placerat lacinia nibh.
+		+ Donec suscipit eu metus sed porttitor.
+
+			* Nunc arcu neque.
+			* Donec sed lobortis odio.
+
+	- Aenean eget sapien ligula.
+
+	  Vivamus hendrerit sem nunc, sed tincidunt lorem volutpat venenatis.
+ 	  Quisque porttitor nulla neque, sed congue nulla dictum ut.
+
+Is displayed as
+
+* Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+
+* Nullam eu ligula a nunc volutpat rutrum.
+
+	+ Vestibulum placerat lacinia nibh.
+	+ Donec suscipit eu metus sed porttitor.
+
+		* Nunc arcu neque.
+		* Donec sed lobortis odio.
+
+- Aenean eget sapien ligula.
+
+  Vivamus hendrerit sem nunc, sed tincidunt lorem volutpat venenatis.
+  Quisque porttitor nulla neque, sed congue nulla dictum ut.
+
+Ordered lists
+----------------
+To create an ordered (enumerated) list: 
+
+* Use numerals ``1, 2, 3, ...``, alphabetic characters upper case ``A, B, C, ...`` or lower case ``a, b, c, ...``, or roman numerals upper case ``I, II, III, ...`` or lower case ``i, ii, iii, ...``. You can also auto-enumerate lists using the hash symbol ``#``. 
+* Specify a formatting type followed by at least one space. The formatting types include a period ``1., A., a., I., i.``, parentheses ``(1), (A), (a), (I), (i)``, and a right-parenthesis ``1), A), a), I), i)``.
+* A new list is started when an enumerator is encountered that does not have the same format and sequence type as the current list (e.g. ``1., (a)``), or the enumerators are not in sequence (e.g. ``1., 3.``).
+* Include blank lines consistent with the unordered list rules.
+
+Refer to `enumerated lists <https://docutils.sourceforge.io/docs/ref/rst/restructuredtext.html#enumerated-lists>`_ in the reST specification for more information.
+
+Example
+*******
+
+.. highlight:: none
+
+The following ordered list ::
+
+	1. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+	2. Nullam eu ligula a nunc volutpat rutrum.
+
+		(A) Vestibulum placerat lacinia nibh.
+		(B) Donec suscipit eu metus sed porttitor.
+
+			a) Nunc arcu neque.
+			b) Donec sed lobortis odio.
+
+	#. Aenean eget sapien ligula.
+
+	  Vivamus hendrerit sem nunc, sed tincidunt lorem volutpat venenatis.
+ 	  Quisque porttitor nulla neque, sed congue nulla dictum ut.
+
+.. highlight:: default
+
+Is displayed as
+
+1. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+2. Nullam eu ligula a nunc volutpat rutrum.
+
+	(A) Vestibulum placerat lacinia nibh.
+	(B) Donec suscipit eu metus sed porttitor.
+
+		a) Nunc arcu neque. 
+		b) Donec sed lobortis odio.
+
+#. Aenean eget sapien ligula.
+
+  Vivamus hendrerit sem nunc, sed tincidunt lorem volutpat venenatis.
+  Quisque porttitor nulla neque, sed congue nulla dictum ut.
+
+Definition list
+---------------
+A definition list associates terms with their definitions and is a convenient way to create a glossary. When creating a definition list:
+
+* Each term is a one-line phrase. 
+* The definition is one or more paragraphs or body elements, indented relative to the term. 
+* Blank lines are not allowed between term and definition.
+* Blank lines are required before the first and after the last definition list item, but are optional between list items. 
+
+Refer to `definition lists <https://docutils.sourceforge.io/docs/ref/rst/restructuredtext.html#definition-lists>`_ in the reST specification for more information.
+
+.. highlight:: none
+
+Example
+*******
+The following definition list ::
+
+	what
+  		Definition lists associate a term with a definition.
+	how
+  		The term is a one-line phrase, and the definition is one or more paragraphs or
+  		body elements, indented relative to the term. 
+
+  		Blank lines are not allowed between term and definition.
+
+.. highlight:: default
+
+Is displayed as
+
+what
+  	Definition lists associate a term with a definition.
+how
+  	The term is a one-line phrase, and the definition is one or more paragraphs or
+  	body elements, indented relative to the term. 
+
+  	Blank lines are not allowed between term and definition.

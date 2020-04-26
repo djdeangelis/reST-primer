@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Search &mdash; reStructuredText Primer 0.0.1 documentation</title>
+  <title>Paragraphs &mdash; reStructuredText Primer 0.0.1 documentation</title>
   
 
   
@@ -25,7 +25,6 @@
         <script src="_static/underscore.js"></script>
         <script src="_static/doctools.js"></script>
         <script src="_static/language_data.js"></script>
-        <script src="_static/searchtools.js"></script>
     
     <script type="text/javascript" src="_static/js/theme.js"></script>
 
@@ -35,7 +34,9 @@
   <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
     <link rel="index" title="Index" href="genindex.html" />
-    <link rel="search" title="Search" href="#" /> 
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Inline markup" href="inlinetext.html" />
+    <link rel="prev" title="Sections and Transitions" href="sections.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -62,7 +63,7 @@
 
           
 <div role="search">
-  <form id="rtd-search-form" class="wy-form" action="#" method="get">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
     <input type="text" name="q" placeholder="Search docs" />
     <input type="hidden" name="check_keywords" value="yes" />
     <input type="hidden" name="area" value="default" />
@@ -80,9 +81,9 @@
             
             
               <p class="caption"><span class="caption-text">Contents:</span></p>
-<ul>
+<ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="sections.html">Sections and Transitions</a></li>
-<li class="toctree-l1"><a class="reference internal" href="paragraphs.html">Paragraphs</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Paragraphs</a></li>
 <li class="toctree-l1"><a class="reference internal" href="inlinetext.html">Inline markup</a></li>
 <li class="toctree-l1"><a class="reference internal" href="lists.html">Lists</a></li>
 <li class="toctree-l1"><a class="reference internal" href="tables.html">Tables</a></li>
@@ -133,12 +134,14 @@
     
       <li><a href="index.html">Docs</a> &raquo;</li>
         
-      <li>Search</li>
+      <li>Paragraphs</li>
     
     
       <li class="wy-breadcrumbs-aside">
         
             
+            <a href="_sources/paragraphs.rst.txt" rel="nofollow"> View page source</a>
+          
         
       </li>
     
@@ -150,24 +153,54 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <noscript>
-  <div id="fallback" class="admonition warning">
-    <p class="last">
-      Please activate JavaScript to enable the search
-      functionality.
-    </p>
-  </div>
-  </noscript>
+  <div class="section" id="paragraphs">
+<h1>Paragraphs<a class="headerlink" href="#paragraphs" title="Permalink to this headline">¶</a></h1>
+<p><a class="reference external" href="https://docutils.sourceforge.io/docs/ref/rst/restructuredtext.html#paragraphs">Paragraphs</a> consist of blocks of left-aligned text with no markup indicating any other body element. Blank lines separate paragraphs from each other and from other body elements. Paragraphs may contain inline markup.</p>
+<p>Two paragraphs are shown below separated by a blank line.</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras dignissim auctor semper.
+Pellentesque dolor turpis, bibendum ac justo ac, sollicitudin condimentum elit.
+Sed suscipit vulputate ultricies.
 
-  
-  <div id="search-results">
-  
-  </div>
+In porta ipsum in ligula auctor, dictum gravida ante vulputate. Suspendisse id urna scelerisque,
+facilisis lacus at, consequat ipsum. Pellentesque nunc ipsum vestibulum luctus purus.
+</pre></div>
+</div>
+<p>To add more vertical space between paragraphs, insert a pipe character (|)</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras dignissim auctor semper.
+Pellentesque dolor turpis, bibendum ac justo ac, sollicitudin condimentum elit.
+Sed suscipit vulputate ultricies.
+
+|
+
+In porta ipsum in ligula auctor, dictum gravida ante vulputate. Suspendisse id urna scelerisque,
+facilisis lacus at, consequat ipsum. Pellentesque nunc ipsum vestibulum luctus purus.
+</pre></div>
+</div>
+<p>Which renders as</p>
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras dignissim auctor semper.
+Pellentesque dolor turpis, bibendum ac justo ac, sollicitudin condimentum elit.
+Sed suscipit vulputate ultricies.</p>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<p>In porta ipsum in ligula auctor, dictum gravida ante vulputate. Suspendisse id urna scelerisque,
+facilisis lacus at, consequat ipsum. Pellentesque nunc ipsum vestibulum luctus purus.</p>
+</div>
+
 
            </div>
            
           </div>
           <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="inlinetext.html" class="btn btn-neutral float-right" title="Inline markup" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="sections.html" class="btn btn-neutral float-left" title="Sections and Transitions" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
   
 
   <hr/>
@@ -200,14 +233,7 @@
   
   
     
-  
-  <script type="text/javascript">
-    jQuery(function() { Search.loadIndex("searchindex.js"); });
-  </script>
-  
-  <script type="text/javascript" id="searchindexloader"></script>
    
-
 
 </body>
 </html>

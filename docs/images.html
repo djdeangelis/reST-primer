@@ -1,0 +1,262 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Images and Figures &mdash; reStructuredText Primer 0.0.1 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+        <script src="_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Admonitions" href="admonitions.html" />
+    <link rel="prev" title="Tables" href="tables.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="index.html" class="icon icon-home"> reStructuredText Primer
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="paragraphs.html">Paragraphs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="sections.html">Sections</a></li>
+<li class="toctree-l1"><a class="reference internal" href="inlinetext.html">Inline markup</a></li>
+<li class="toctree-l1"><a class="reference internal" href="lists.html">Lists</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tables.html">Tables</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Images and Figures</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#image-directive">Image directive</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#figure-directive">Figure directive</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="admonitions.html">Admonitions</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">reStructuredText Primer</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html">Docs</a> &raquo;</li>
+        
+      <li>Images and Figures</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="_sources/images.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="images-and-figures">
+<h1>Images and Figures<a class="headerlink" href="#images-and-figures" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="image-directive">
+<h2>Image directive<a class="headerlink" href="#image-directive" title="Permalink to this headline">¶</a></h2>
+<p>The <a class="reference external" href="https://docutils.sourceforge.io/docs/ref/rst/directives.html#image">image directive</a> allows you to include a simple picture in a document. You specify the URI for the image source file in the directive argument.</p>
+<p>The following image options are supported:</p>
+<ul class="simple">
+<li><p>alt - Alternate text.</p></li>
+<li><p>height - The height of the image in pixels, used to reserve space or scale the image vertically.</p></li>
+<li><p>width - The width of the image in pixels, used to reserve space or scale the image horizontally.</p></li>
+<li><p>scale - The uniform scaling factor of the image. “100” means full-size.</p></li>
+<li><p>align - The alignment of the image, equivalent to the HTML &lt;img&gt; tag’s “align” attribute. The values <code class="docutils literal notranslate"><span class="pre">top</span></code>, <code class="docutils literal notranslate"><span class="pre">middle</span></code>, and <code class="docutils literal notranslate"><span class="pre">bottom</span></code> control the vertical alignment relative to the text baseline. The values <code class="docutils literal notranslate"><span class="pre">left</span></code>, <code class="docutils literal notranslate"><span class="pre">center</span></code>, and <code class="docutils literal notranslate"><span class="pre">right</span></code> control the horizontal alignment, which allows the image to float so that text can flow around it.</p></li>
+<li><p>class - Set a class attribute value on the image element.</p></li>
+</ul>
+<p>The directive below displays an image from a local Git repository’s <code class="docutils literal notranslate"><span class="pre">_static</span></code> directory and specifies alternate text.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">..</span> <span class="n">image</span><span class="p">::</span> <span class="o">/</span><span class="n">_static</span><span class="o">/</span><span class="n">mandala</span><span class="o">.</span><span class="n">jpg</span>
+   <span class="p">:</span><span class="n">alt</span><span class="p">:</span> <span class="n">Mandala</span>
+</pre></div>
+</div>
+<p>The image is displayed below.</p>
+<img alt="Mandala" src="_images/mandala.jpg" />
+</div>
+<div class="section" id="figure-directive">
+<h2>Figure directive<a class="headerlink" href="#figure-directive" title="Permalink to this headline">¶</a></h2>
+<p>The <a class="reference external" href="https://docutils.sourceforge.io/docs/ref/rst/directives.html#figure">figure directive</a> allows you to include a figure in a document. You specify the URI for the figure source file in the directive argument.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>A figure consists of image data (including image options), an optional caption (a single paragraph), and an optional legend (arbitrary body elements).</p>
+</div>
+<p>The <code class="docutils literal notranslate"><span class="pre">figure</span></code> directive supports all of the options of the <code class="docutils literal notranslate"><span class="pre">image</span></code> directive and the following additonal options:</p>
+<ul class="simple">
+<li><p>figwidth -  The width of the figure in pixels, to limit the horizontal space used. A special value of “image” is allowed, in which case the included image’s actual width is used.</p></li>
+<li><p>figclass - Set a “class” attribute value on the figure element.</p></li>
+</ul>
+<p>The directive below displays an image from a local Git repository’s <code class="docutils literal notranslate"><span class="pre">_static</span></code> directory, scales the image to 50%, aligns it to the right, and specifies alternate text. Additonally, a caption and legend are specified.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">..</span> <span class="n">figure</span><span class="p">::</span> <span class="o">/</span><span class="n">_static</span><span class="o">/</span><span class="n">mandala</span><span class="o">.</span><span class="n">jpg</span>
+        <span class="p">:</span><span class="n">scale</span><span class="p">:</span> <span class="mi">50</span>
+        <span class="p">:</span><span class="n">align</span><span class="p">:</span> <span class="n">right</span>
+        <span class="p">:</span><span class="n">alt</span><span class="p">:</span> <span class="n">Mandala</span>
+
+        <span class="n">The</span> <span class="n">mandala</span> <span class="n">has</span> <span class="n">various</span> <span class="n">interpretations</span><span class="o">.</span>
+</pre></div>
+</div>
+<p>The image is displayed below. Note that since the image is floated right, the text flows around it.</p>
+<div class="figure align-right" id="id3">
+<a class="reference internal image-reference" href="_images/mandala.jpg"><img alt="Mandala" src="_images/mandala.jpg" style="width: 210.0px; height: 210.0px;" /></a>
+<p class="caption"><span class="caption-text">The mandala has various
+interpretations.</span><a class="headerlink" href="#id3" title="Permalink to this image">¶</a></p>
+</div>
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin lobortis risus ullamcorper, tincidunt nibh sed, cursus mauris. Pellentesque ultrices mattis lectus efficitur laoreet. Aliquam non dapibus ex, eu dictum sapien. Duis id eros quis eros placerat tincidunt. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Phasellus ac pharetra justo. Mauris in maximus augue. Integer scelerisque varius nisl, nec pharetra lorem fermentum convallis. Proin tempus turpis sapien, in commodo nisi ornare eget. Vestibulum feugiat magna sed dolor tempor condimentum.</p>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="admonitions.html" class="btn btn-neutral float-right" title="Admonitions" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="tables.html" class="btn btn-neutral float-left" title="Tables" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2020, D. J. DeAngelis
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

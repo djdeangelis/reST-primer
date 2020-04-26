@@ -1,0 +1,15 @@
+Headings
+========
+
+Titles are under- (and over-)lined (decorated) by =*-^"~`:.'# as below. The exact order of the decoration is not important, the one below is the Python convention.
+
+
+Refer to the `reST specification <https://docutils.sourceforge.io/docs/ref/rst/restructuredtext.html#sections>`_ more information.
+
+Section 1
+
+Section 2
+
+Section 3
+
+Section 4
