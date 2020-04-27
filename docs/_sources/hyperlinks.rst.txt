@@ -31,7 +31,7 @@ Note that section titles automatically generate hyperlink targets with the title
 You can link to sections using an implict link or an expicit link. Implicit links use the syntax ```Section title`_`` and explicit 
 links use the ``:ref:`` role.
 
-To link to the "External links" section on this this page using an implict link ::
+To create an implicit link to the "External links" section on this page, use the syntax ```Section title`_``. ::
 
 	`External links`_
 
@@ -46,24 +46,23 @@ To create an explicit link, use the ``:ref:`` role with the section title as the
 Both of these methods produce the same result :ref:`External links`.
 
 Another way to link to internal documents is to insert a label directly before a section title, and then reference the title with the 
-``:ref:`label-name.`` role. This approach allows you to uniquely identify sections that have the same name. For example, you might have 
-several documents with an "Overview" section title. 
+``:ref:`label-name.`` role. This approach allows you to uniquely identify sections that have the same name. 
 
-As shown below, the "Inline markup" page includes a unique label. ::
+As shown below, the "Inline Markup" page includes a unique label. ::
 
 	.. _inline-markup-intro:
 
-	Inline markup
+	Inline Markup
 	=============
 
 You can reference the label explicily. ::
 
 	:ref:`inline-markup-intro`
 
-which is rendered using the section title :ref:`inline-markup-intro`
+which is rendered using the section title :ref:`inline-markup-intro`.
 
-You can also specify a differnt nane for the label. ::
+You can also specify a different name for the label. ::
 
 	:ref:`Introduction to inline markup<inline-markup-intro>`
 
-which is rendered as :ref:`Introduction to inline markup<inline-markup-intro>`
+which is rendered as :ref:`Introduction to inline markup<inline-markup-intro>`.
