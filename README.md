@@ -4,6 +4,6 @@ The reStructuredText Primer project serves two purposes. First, it is a project 
 
 My primary resources are:
 
-* reStructuredText Markup Specification (https://docutils.sourceforge.io/docs/ref/rst/restructuredtext.html)
-* Sphinx documentation (http://www.sphinx-doc.org/en/master/)
-* Online reStructuredText Editor (http://rst.ninjs.org/)
+* [reStructuredText Markup Specification](https://docutils.sourceforge.io/docs/ref/rst/restructuredtext.html)
+* [Sphinx documentation](http://www.sphinx-doc.org/en/master/)
+* [Online reStructuredText Editor](http://rst.ninjs.org/)
