@@ -1,0 +1,276 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Hyperlinks &mdash; reStructuredText Primer 0.0.1 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+        <script src="_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Lists" href="lists.html" />
+    <link rel="prev" title="Inline markup" href="inlinetext.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="index.html" class="icon icon-home"> reStructuredText Primer
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="sections.html">Sections and Transitions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="paragraphs.html">Paragraphs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="inlinetext.html">Inline markup</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Hyperlinks</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#external-links">External links</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#internal-links">Internal links</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="lists.html">Lists</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tables.html">Tables</a></li>
+<li class="toctree-l1"><a class="reference internal" href="images.html">Images and Figures</a></li>
+<li class="toctree-l1"><a class="reference internal" href="admonitions.html">Admonitions</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">reStructuredText Primer</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html">Docs</a> &raquo;</li>
+        
+      <li>Hyperlinks</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="_sources/hyperlinks.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="hyperlinks">
+<h1>Hyperlinks<a class="headerlink" href="#hyperlinks" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="external-links">
+<h2>External links<a class="headerlink" href="#external-links" title="Permalink to this headline">¶</a></h2>
+<p>The simplest way to create an external link is to specify just the URI using the syntax <code class="docutils literal notranslate"><span class="pre">`&lt;URI&gt;`_</span></code>.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>`&lt;https://docutils.sourceforge.io/rst.html&gt;`_
+</pre></div>
+</div>
+<p>The link is rendered as <a class="reference external" href="https://docutils.sourceforge.io/rst.html">https://docutils.sourceforge.io/rst.html</a>.</p>
+<p>The full URI text may be hard for readers to parse and not very meaningful. You can create an external link
+name of your choosing using the syntax <code class="docutils literal notranslate"><span class="pre">`link</span> <span class="pre">name</span> <span class="pre">&lt;URI&gt;`_</span></code>.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>`reStructuredText home page &lt;https://docutils.sourceforge.io/rst.html&gt;`_
+</pre></div>
+</div>
+<p>The link is rendered as <a class="reference external" href="https://docutils.sourceforge.io/rst.html">reStructuredText home page</a>.</p>
+<p>This approach is more flexible, but it can sacrifice code readability especially when the URI is long.
+Another approach is to separate the link source and target by using an indirect hyperlink construct.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>`reStructuredText home page`_
+
+.. _reStructuredText home page: https://docutils.sourceforge.io/rst.html
+</pre></div>
+</div>
+</div>
+<div class="section" id="internal-links">
+<h2>Internal links<a class="headerlink" href="#internal-links" title="Permalink to this headline">¶</a></h2>
+<p>You can create internal links to locations within the same document, and to locations in other documents within the same project.</p>
+<p>Note that section titles automatically generate hyperlink targets with the title text given as the hyperlink name.
+You can link to sections using an implict link or an expicit link. Implicit links use the syntax <code class="docutils literal notranslate"><span class="pre">`Section</span> <span class="pre">title`_</span></code> and explicit
+links use the <code class="docutils literal notranslate"><span class="pre">:ref:</span></code> role.</p>
+<p>To link to the “External links” section on this this page using an implict link</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>`External links`_
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This implicit link construct works only if the title and link are within the same reST file. Otherwise, you need to create a label
+before the title and refer to this new link explicitly.</p>
+</div>
+<p>To create an explicit link, use the <code class="docutils literal notranslate"><span class="pre">:ref:</span></code> role with the section title as the parameter.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>:ref:`External links`
+</pre></div>
+</div>
+<p>Both of these methods produce the same result <a class="reference internal" href="#external-links"><span class="std std-ref">External links</span></a>.</p>
+<p>Another way to link to internal documents is to insert a label directly before a section title, and then reference the title with the
+<code class="docutils literal notranslate"><span class="pre">:ref:`label-name.</span></code> role. This approach allows you to uniquely identify sections that have the same name. For example, you might have
+several documents with an “Overview” section title.</p>
+<p>As shown below, the “Inline markup” page includes a unique label.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">..</span> <span class="n">_inline</span><span class="o">-</span><span class="n">markup</span><span class="o">-</span><span class="n">intro</span><span class="p">:</span>
+
+<span class="n">Inline</span> <span class="n">markup</span>
+<span class="o">=============</span>
+</pre></div>
+</div>
+<p>You can reference the label explicily.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>:ref:`inline-markup-intro`
+</pre></div>
+</div>
+<p>which is rendered using the section title <a class="reference internal" href="inlinetext.html#inline-markup-intro"><span class="std std-ref">Inline markup</span></a></p>
+<p>You can also specify a differnt nane for the label.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>:ref:`Introduction to inline markup&lt;inline-markup-intro&gt;`
+</pre></div>
+</div>
+<p>which is rendered as <a class="reference internal" href="inlinetext.html#inline-markup-intro"><span class="std std-ref">Introduction to inline markup</span></a></p>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="lists.html" class="btn btn-neutral float-right" title="Lists" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="inlinetext.html" class="btn btn-neutral float-left" title="Inline markup" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2020, D. J. DeAngelis
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

@@ -4,16 +4,16 @@ Paragraphs
 
 .. highlight:: none
 
-Two paragraphs are shown below separated by a blank line. ::
+The two paragraphs shown below are separated by a blank line. ::
 
 	Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras dignissim auctor semper. 
 	Pellentesque dolor turpis, bibendum ac justo ac, sollicitudin condimentum elit. 
-	Sed suscipit vulputate ultricies. 
+	Sed suscipit vulputate ultricies.
 
 	In porta ipsum in ligula auctor, dictum gravida ante vulputate. Suspendisse id urna scelerisque, 
 	facilisis lacus at, consequat ipsum. Pellentesque nunc ipsum vestibulum luctus purus.
 
-To add more vertical space between paragraphs, insert a pipe character (\|) ::
+You can add space between paragraphs by inserting empty lines with the pipe character (\|). ::
 
 	Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras dignissim auctor semper. 
 	Pellentesque dolor turpis, bibendum ac justo ac, sollicitudin condimentum elit. 
@@ -26,13 +26,5 @@ To add more vertical space between paragraphs, insert a pipe character (\|) ::
 
 .. highlight:: default
 
-Which renders as
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras dignissim auctor semper. 
-Pellentesque dolor turpis, bibendum ac justo ac, sollicitudin condimentum elit. 
-Sed suscipit vulputate ultricies.
 
-|
-
-In porta ipsum in ligula auctor, dictum gravida ante vulputate. Suspendisse id urna scelerisque, 
-facilisis lacus at, consequat ipsum. Pellentesque nunc ipsum vestibulum luctus purus.

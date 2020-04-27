@@ -1,0 +1,69 @@
+Hyperlinks
+==========
+
+External links
+--------------
+The simplest way to create an external link is to specify just the URI using the syntax ```<URI>`_``. ::
+
+	`<https://docutils.sourceforge.io/rst.html>`_
+
+The link is rendered as `<https://docutils.sourceforge.io/rst.html>`_.
+
+The full URI text may be hard for readers to parse and not very meaningful. You can create an external link 
+name of your choosing using the syntax ```link name <URI>`_``. ::
+
+	`reStructuredText home page <https://docutils.sourceforge.io/rst.html>`_ 
+
+The link is rendered as `reStructuredText home page <https://docutils.sourceforge.io/rst.html>`_. 
+
+This approach is more flexible, but it can sacrifice code readability especially when the URI is long. 
+Another approach is to separate the link source and target by using an indirect hyperlink construct. ::
+
+	`reStructuredText home page`_
+
+	.. _reStructuredText home page: https://docutils.sourceforge.io/rst.html
+
+Internal links
+--------------
+You can create internal links to locations within the same document, and to locations in other documents within the same project.
+
+Note that section titles automatically generate hyperlink targets with the title text given as the hyperlink name.
+You can link to sections using an implict link or an expicit link. Implicit links use the syntax ```Section title`_`` and explicit 
+links use the ``:ref:`` role.
+
+To link to the "External links" section on this this page using an implict link ::
+
+	`External links`_
+
+.. note:: 
+   This implicit link construct works only if the title and link are within the same reST file. Otherwise, you need to create a label 
+   before the title and refer to this new link explicitly.
+
+To create an explicit link, use the ``:ref:`` role with the section title as the parameter. ::
+
+	:ref:`External links`
+
+Both of these methods produce the same result :ref:`External links`.
+
+Another way to link to internal documents is to insert a label directly before a section title, and then reference the title with the 
+``:ref:`label-name.`` role. This approach allows you to uniquely identify sections that have the same name. For example, you might have 
+several documents with an "Overview" section title. 
+
+As shown below, the "Inline markup" page includes a unique label. ::
+
+	.. _inline-markup-intro:
+
+	Inline markup
+	=============
+
+You can reference the label explicily. ::
+
+	:ref:`inline-markup-intro`
+
+which is rendered using the section title :ref:`inline-markup-intro`
+
+You can also specify a differnt nane for the label. ::
+
+	:ref:`Introduction to inline markup<inline-markup-intro>`
+
+which is rendered as :ref:`Introduction to inline markup<inline-markup-intro>`

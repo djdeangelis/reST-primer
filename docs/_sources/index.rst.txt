@@ -12,7 +12,7 @@ to a lesser extent, Sphinx and Docutils. Second, it is a resource for others to 
 My primary resources are: 
 
 * `reStructuredText Markup Specification <https://docutils.sourceforge.io/docs/ref/rst/restructuredtext.html>`_
-* `reStructuredText Cheat Sheet <https://docutils.sourceforge.io/docs/user/rst/cheatsheet.txt>`_
+* `Sphinx documentation <http://www.sphinx-doc.org/en/master/>`_
 * `Online reStructuredText Editor <http://rst.ninjs.org/>`_
 
 .. toctree::
@@ -22,14 +22,15 @@ My primary resources are:
    sections
    paragraphs
    inlinetext
+   hyperlinks
    lists
    tables
    images
    admonitions
 
-Indices and tables
-==================
+.. Indices and tables
+.. ==================
 
-* :ref:`genindex`
-* :ref:`modindex`
-* :ref:`search`
+.. * :ref:`genindex`
+.. * :ref:`modindex`
+.. * :ref:`search`

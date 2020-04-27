@@ -1,4 +1,6 @@
-Inline markup
+ .. _inline-markup-intro:
+
+Inline Markup
 =============
 
 `Inline markup <https://docutils.sourceforge.io/docs/ref/rst/restructuredtext.html#inline-markup>`_ allows words and phrases within text to have character 
@@ -10,7 +12,7 @@ Be aware of some restrictions of this markup:
 * Content may not start or end with whitespace: \* text\* is wrong.
 
 
-There are nine inline markup constructs. The five most common are given below.
+There are nine inline markup constructs. Four common constructs are given below.
 
 ======================  ===================  ======================================
 Text                    Rendered result      Descripion
@@ -19,9 +21,7 @@ Text                    Rendered result      Descripion
 ----------------------  -------------------  --------------------------------------
 \*\*strong\*\*          **strong**           Normally rendered as bold.
 ----------------------  -------------------  --------------------------------------
-\`\`literal\`\`         ``literal``          Normally rendered as monospaced text; typically used for code samples
-----------------------  -------------------  --------------------------------------
-reference\_             reference_           A one-word hyperlink reference
+\`\`literal\`\`         ``literal``          Normally rendered as monospaced text and typically used for code samples
 ----------------------  -------------------  --------------------------------------
 \`phrase reference\`\_  `Inline markup`_     A multi-word hyperlink reference
 ======================  ===================  ======================================

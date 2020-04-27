@@ -19,8 +19,6 @@ The following admonition directives are supported:
 
 .. highlight:: none
 
-Examples
-********
 The following ``note`` admonition directive contains multiple paragraphs. ::
 
 	.. note:: Use a note for information you want the user to pay particular attention to.

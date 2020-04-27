@@ -99,8 +99,8 @@ Is displayed as
   Vivamus hendrerit sem nunc, sed tincidunt lorem volutpat venenatis.
   Quisque porttitor nulla neque, sed congue nulla dictum ut.
 
-Definition list
----------------
+Definition lists
+----------------
 A definition list associates terms with their definitions and is a convenient way to create a glossary. When creating a definition list:
 
 * Each term is a one-line phrase. 
