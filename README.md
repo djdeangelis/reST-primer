@@ -1,1 +1,1 @@
-# reStructuredText example project
+# reStructuredText Primer project
