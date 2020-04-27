@@ -1,1 +1,1 @@
-# sphinx example project
+# reStructuredText example project
