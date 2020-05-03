@@ -1,5 +1,2 @@
 .buildinfo
-../.jekyll-cache/
-../_site/
-../sphinx copy/
-../sphinx/
+.DS_Store
