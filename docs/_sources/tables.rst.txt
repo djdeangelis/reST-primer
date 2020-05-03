@@ -5,7 +5,7 @@ Simple tables
 -------------
 `Simple tables <https://docutils.sourceforge.io/docs/ref/rst/restructuredtext.html#simple-tables>`_ are compact and easy to construct, and are best suited for displaying simple data sets. 
 
-To consuct a simple table:
+To construct a simple table:
 
 * Define the horizontal borders with the ``=`` and ``-`` characters.
 
