@@ -1,2 +1,5 @@
 .buildinfo
-/Sphinx
+../.jekyll-cache/
+../_site/
+../sphinx copy/
+../sphinx/
