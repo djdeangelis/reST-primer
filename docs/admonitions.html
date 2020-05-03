@@ -81,10 +81,11 @@
             
               <p class="caption"><span class="caption-text">Contents:</span></p>
 <ul class="current">
-<li class="toctree-l1"><a class="reference internal" href="sections.html">Sections and Transitions</a></li>
-<li class="toctree-l1"><a class="reference internal" href="paragraphs.html">Paragraphs</a></li>
-<li class="toctree-l1"><a class="reference internal" href="inlinetext.html">Inline markup</a></li>
+<li class="toctree-l1"><a class="reference internal" href="sections.html">Sections</a></li>
+<li class="toctree-l1"><a class="reference internal" href="paragraphs.html">Blocks</a></li>
+<li class="toctree-l1"><a class="reference internal" href="inlinetext.html">Inline Markup</a></li>
 <li class="toctree-l1"><a class="reference internal" href="hyperlinks.html">Hyperlinks</a></li>
+<li class="toctree-l1"><a class="reference internal" href="footnotes.html">Footnotes and Citations</a></li>
 <li class="toctree-l1"><a class="reference internal" href="lists.html">Lists</a></li>
 <li class="toctree-l1"><a class="reference internal" href="tables.html">Tables</a></li>
 <li class="toctree-l1"><a class="reference internal" href="images.html">Images and Figures</a></li>
@@ -159,7 +160,7 @@
   <div class="section" id="admonitions">
 <h1>Admonitions<a class="headerlink" href="#admonitions" title="Permalink to this headline">¶</a></h1>
 <p><a class="reference external" href="https://docutils.sourceforge.io/0.3/spec/rst/directives.html#admonitions">Admonitions</a> are specially marked topics that can appear
-anywhere in your document as an ordinary body element. Any text immediately following the directive indicator (on the same line or indented
+anywhere in a document as an ordinary body element. Any text immediately following the directive indicator (on the same line or indented
 on following lines) is interpreted as a directive block and is parsed for normal body elements. Typically, an admonition is rendered as an
 offset block in a document, sometimes outlined or shaded, with a title matching the admonition type.</p>
 <p>The following admonition directives are supported:</p>
@@ -195,38 +196,41 @@ might not render in the HTML output.</p>
 <p>Notes can have more than one paragraph. Successive paragraphs mustindent to
 the same level as the rest of the note.</p>
 </div>
-<p>The following <code class="docutils literal notranslate"><span class="pre">warning</span></code> admonition directive contains an unordered list.</p>
+<p>The following <code class="docutils literal notranslate"><span class="pre">warning</span></code> admonition directive contains multiple paragraphs.</p>
 <div class="highlight-none notranslate"><div class="highlight"><pre><span></span>.. warning:: Use a warning for information the user must understand to avoid negative consequences.
 
-   You can include any body element in the admonition such as an unordered list.
+   You can include any body element in the admonition such as a bulleted list.
 
    * First list item.
    * Second list item.
+
+   You can also include inlie markup such as *italics*, **bold**, and ``literal``.
 </pre></div>
 </div>
 <p>It is rendered as</p>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
 <p>Use a warning for information the user must understand to avoid negative consequences.</p>
-<p>You can include any body element in the admonition such as an unordered list.</p>
+<p>You can include any body element in the admonition such as a bulleted list.</p>
 <ul class="simple">
 <li><p>First list item.</p></li>
 <li><p>Second list item.</p></li>
 </ul>
+<p>You can also include inlie markup such as <em>italics</em>, <strong>bold</strong>, and <code class="docutils literal notranslate"><span class="pre">literal</span></code>.</p>
 </div>
 <div class="section" id="generic-admonitions">
 <h2>Generic admonitions<a class="headerlink" href="#generic-admonitions" title="Permalink to this headline">¶</a></h2>
-<p>You can create a <a class="reference external" href="https://docutils.sourceforge.io/0.3/spec/rst/directives.html#generic-admonition">generic admonition</a> with the <code class="docutils literal notranslate"><span class="pre">admonition</span></code> directive. The title of the admonition is specified after the directive.</p>
-<p>The following generic admonition it titled “RTFM”.</p>
+<p>You can create a <a class="reference external" href="https://docutils.sourceforge.io/0.3/spec/rst/directives.html#generic-admonition">generic admonition</a> with the <code class="docutils literal notranslate"><span class="pre">admonition</span></code> directive. The title of the admonition is specified immediately after the directive and preceded by a space.</p>
+<p>The following generic admonition is titled “RTFM”.</p>
 <div class="highlight-none notranslate"><div class="highlight"><pre><span></span>.. admonition:: RTFM
 
-   Read the flipping manual!
+   Read the funtastic manual!
 </pre></div>
 </div>
 <p>It is rendered as</p>
 <div class="admonition-rtfm admonition">
 <p class="admonition-title">RTFM</p>
-<p>Read the flipping manual!</p>
+<p>Read the funtastic manual!</p>
 </div>
 <p>The admonition title is used as a class attribute value after being converted into a valid identifier form (down cased, non-alphanumeric
 characters converted to single hyphens, and “admonition-” prefixed) as illustrated by the following document tree pseudo-XML</p>
@@ -235,7 +239,7 @@ characters converted to single hyphens, and “admonition-” prefixed) as illus
     &lt;title&gt;
         RTFM
     &lt;paragraph&gt;
-        You should read the flipping manual!
+        You should read the funtastic manual!
 </pre></div>
 </div>
 <p>You can then include the class in the admonition using the <code class="docutils literal notranslate"><span class="pre">:class:</span></code> specifier.</p>

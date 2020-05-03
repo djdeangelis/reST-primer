@@ -23,6 +23,7 @@ My primary resources are:
    paragraphs
    inlinetext
    hyperlinks
+   footnotes
    lists
    tables
    images

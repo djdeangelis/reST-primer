@@ -82,10 +82,11 @@
             
               <p class="caption"><span class="caption-text">Contents:</span></p>
 <ul class="current">
-<li class="toctree-l1"><a class="reference internal" href="sections.html">Sections and Transitions</a></li>
-<li class="toctree-l1"><a class="reference internal" href="paragraphs.html">Paragraphs</a></li>
-<li class="toctree-l1"><a class="reference internal" href="inlinetext.html">Inline markup</a></li>
+<li class="toctree-l1"><a class="reference internal" href="sections.html">Sections</a></li>
+<li class="toctree-l1"><a class="reference internal" href="paragraphs.html">Blocks</a></li>
+<li class="toctree-l1"><a class="reference internal" href="inlinetext.html">Inline Markup</a></li>
 <li class="toctree-l1"><a class="reference internal" href="hyperlinks.html">Hyperlinks</a></li>
+<li class="toctree-l1"><a class="reference internal" href="footnotes.html">Footnotes and Citations</a></li>
 <li class="toctree-l1"><a class="reference internal" href="lists.html">Lists</a></li>
 <li class="toctree-l1"><a class="reference internal" href="tables.html">Tables</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">Images and Figures</a><ul>
@@ -165,12 +166,13 @@
 <p>The <a class="reference external" href="https://docutils.sourceforge.io/docs/ref/rst/directives.html#image">image directive</a> allows you to include a simple picture in a document. You specify the URI for the image source file in the directive argument.</p>
 <p>The following image options are supported:</p>
 <ul class="simple">
-<li><p>alt - Alternate text.</p></li>
-<li><p>height - The height of the image in pixels, used to reserve space or scale the image vertically.</p></li>
-<li><p>width - The width of the image in pixels, used to reserve space or scale the image horizontally.</p></li>
-<li><p>scale - The uniform scaling factor of the image. “100” means full-size.</p></li>
-<li><p>align - The alignment of the image, equivalent to the HTML &lt;img&gt; tag’s “align” attribute. The values <code class="docutils literal notranslate"><span class="pre">top</span></code>, <code class="docutils literal notranslate"><span class="pre">middle</span></code>, and <code class="docutils literal notranslate"><span class="pre">bottom</span></code> control the vertical alignment relative to the text baseline. The values <code class="docutils literal notranslate"><span class="pre">left</span></code>, <code class="docutils literal notranslate"><span class="pre">center</span></code>, and <code class="docutils literal notranslate"><span class="pre">right</span></code> control the horizontal alignment, which allows the image to float so that text can flow around it.</p></li>
-<li><p>class - Set a class attribute value on the image element.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">alt</span></code> - Alternate text.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">height</span></code> - The height of the image in pixels, used to reserve space or scale the image vertically.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">width</span></code> - The width of the image in pixels, used to reserve space or scale the image horizontally.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">scale</span></code> - The uniform scaling factor of the image. “100” means full-size.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">class</span></code> - Set a class attribute value on the image element.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">align</span></code> - The alignment of the image. The values <code class="docutils literal notranslate"><span class="pre">top</span></code>, <code class="docutils literal notranslate"><span class="pre">middle</span></code>, and <code class="docutils literal notranslate"><span class="pre">bottom</span></code> control the vertical alignment relative to the text baseline.
+The values <code class="docutils literal notranslate"><span class="pre">left</span></code>, <code class="docutils literal notranslate"><span class="pre">center</span></code>, and <code class="docutils literal notranslate"><span class="pre">right</span></code> control the horizontal alignment, which allows the image to float so that text can flow around it.</p></li>
 </ul>
 <p>The directive below displays an image from a local Git repository’s <code class="docutils literal notranslate"><span class="pre">_static</span></code> directory and specifies alternate text.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">..</span> <span class="n">image</span><span class="p">::</span> <span class="o">/</span><span class="n">_static</span><span class="o">/</span><span class="n">mandala</span><span class="o">.</span><span class="n">jpg</span>
@@ -187,12 +189,12 @@
 <p class="admonition-title">Note</p>
 <p>A figure consists of image data (including image options), an optional caption (a single paragraph), and an optional legend (arbitrary body elements).</p>
 </div>
-<p>The <code class="docutils literal notranslate"><span class="pre">figure</span></code> directive supports all of the options of the <code class="docutils literal notranslate"><span class="pre">image</span></code> directive and the following additonal options:</p>
+<p>The <code class="docutils literal notranslate"><span class="pre">figure</span></code> directive supports all the options of the <code class="docutils literal notranslate"><span class="pre">image</span></code> directive and these additonal options:</p>
 <ul class="simple">
-<li><p>figwidth -  The width of the figure in pixels, to limit the horizontal space used. A special value of “image” is allowed, in which case the included image’s actual width is used.</p></li>
-<li><p>figclass - Set a “class” attribute value on the figure element.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">figwidth</span></code> -  The width of the figure in pixels, to limit the horizontal space used. A special value of “image” is allowed, in which case the included image’s actual width is used.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">figclass</span></code> - Set a “class” attribute value on the figure element.</p></li>
 </ul>
-<p>The directive below displays an image from a local Git repository’s <code class="docutils literal notranslate"><span class="pre">_static</span></code> directory, scales the image to 50%, aligns it to the right, and specifies alternate text. Additonally, a caption and legend are specified.</p>
+<p>The directive below displays an image from a local Git repository’s <code class="docutils literal notranslate"><span class="pre">_static</span></code> directory, scales the image to 50%, aligns it to the right, and specifies alternate text. Additonally, a caption is specified.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">..</span> <span class="n">figure</span><span class="p">::</span> <span class="o">/</span><span class="n">_static</span><span class="o">/</span><span class="n">mandala</span><span class="o">.</span><span class="n">jpg</span>
         <span class="p">:</span><span class="n">scale</span><span class="p">:</span> <span class="mi">50</span>
         <span class="p">:</span><span class="n">align</span><span class="p">:</span> <span class="n">right</span>
@@ -207,7 +209,8 @@
 <p class="caption"><span class="caption-text">The mandala has various
 interpretations.</span><a class="headerlink" href="#id3" title="Permalink to this image">¶</a></p>
 </div>
-<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin lobortis risus ullamcorper, tincidunt nibh sed, cursus mauris. Pellentesque ultrices mattis lectus efficitur laoreet. Aliquam non dapibus ex, eu dictum sapien. Duis id eros quis eros placerat tincidunt. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Phasellus ac pharetra justo. Mauris in maximus augue. Integer scelerisque varius nisl, nec pharetra lorem fermentum convallis. Proin tempus turpis sapien, in commodo nisi ornare eget. Vestibulum feugiat magna sed dolor tempor condimentum.</p>
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin lobortis risus ullamcorper, tincidunt nibh sed, cursus mauris. Pellentesque ultrices mattis lectus efficitur laoreet. Aliquam non dapibus ex, eu dictum sapien. Duis id eros quis eros placerat tincidunt. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Phasellus ac pharetra justo. Mauris in maximus augue. Integer scelerisque varius nisl, nec pharetra lorem fermentum convallis. Proin tempus turpis sapien, in commodo nisi ornare eget. Vestibulum feugiat magna sed dolor tempor.</p>
+<p>Donec imperdiet nisl diam, at ultricies elit blandit eu. Nam hendrerit urna in enim ullamcorper, id pretium sem vulputate. Nullam consectetur leo augue, eget mattis metus placerat eu.</p>
 </div>
 </div>
 

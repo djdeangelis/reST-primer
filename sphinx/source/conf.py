@@ -24,7 +24,6 @@ author = 'D. J. DeAngelis'
 # The full version, including alpha/beta/rc tags
 release = '0.0.1'
 
-
 # -- General configuration ---------------------------------------------------
 
 # Add any Sphinx extension module names here, as strings. They can be
@@ -33,12 +32,13 @@ release = '0.0.1'
 # import sphinx_rtd_theme
 # extensions = ["sphinx_rtd_theme"]
 extensions = [
-    'sphinx_rtd_theme',
-    'sphinx.ext.autosectionlabel',
+   'sphinx_rtd_theme',
+    'sphinx.ext.autosectionlabel'
 ]
 
 # Add any paths that contain templates here, relative to this directory.
 templates_path = ['_templates']
+# templates_path = ['../_themes']
 
 # List of patterns, relative to source directory, that match files and
 # directories to ignore when looking for source files.

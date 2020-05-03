@@ -1,0 +1,321 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Footnotes and Citations &mdash; reStructuredText Primer 0.0.1 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+        <script src="_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Lists" href="lists.html" />
+    <link rel="prev" title="Hyperlinks" href="hyperlinks.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="index.html" class="icon icon-home"> reStructuredText Primer
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="sections.html">Sections</a></li>
+<li class="toctree-l1"><a class="reference internal" href="paragraphs.html">Blocks</a></li>
+<li class="toctree-l1"><a class="reference internal" href="inlinetext.html">Inline Markup</a></li>
+<li class="toctree-l1"><a class="reference internal" href="hyperlinks.html">Hyperlinks</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Footnotes and Citations</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#footnotes">Footnotes</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#manual-footnotes">Manual footnotes</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#autonumber-footnotes">Autonumber footnotes</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#autonumber-label-footnotes">Autonumber-label footnotes</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#footnote-rubric">Footnote rubric</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#citations">Citations</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="lists.html">Lists</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tables.html">Tables</a></li>
+<li class="toctree-l1"><a class="reference internal" href="images.html">Images and Figures</a></li>
+<li class="toctree-l1"><a class="reference internal" href="admonitions.html">Admonitions</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">reStructuredText Primer</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html">Docs</a> &raquo;</li>
+        
+      <li>Footnotes and Citations</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="_sources/footnotes.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="footnotes-and-citations">
+<h1>Footnotes and Citations<a class="headerlink" href="#footnotes-and-citations" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="footnotes">
+<h2>Footnotes<a class="headerlink" href="#footnotes" title="Permalink to this headline">¶</a></h2>
+<p><a class="reference external" href="https://docutils.sourceforge.io/docs/ref/rst/restructuredtext.html#footnotes">Footnotes</a> are a way to include sources, notes,
+and other ancillary information in a document. You can create three main types of footnotes: manual, autonumber, and autonumber-label.</p>
+<p>Each footnote has two parts:</p>
+<ul class="simple">
+<li><p><strong>A reference</strong> - A footnote reference links to the footnote definition, and is specified using the syntax <code class="docutils literal notranslate"><span class="pre">[label]_</span></code>.
+The label depends on the footnote type.</p></li>
+<li><p><strong>A definition</strong> - A footnote definition consists of an explicit markup start (“.. “), a label, and content (body elements). Each footnote
+automatically generates a hyperlink target pointing to itself. The text of the hyperlink target name is given by the footnote label.</p></li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Footnotes can appear anywhere in your document, and all three footnote types can appear in the same document.</p>
+</div>
+<div class="section" id="manual-footnotes">
+<h3>Manual footnotes<a class="headerlink" href="#manual-footnotes" title="Permalink to this headline">¶</a></h3>
+<p>To create a manual footnote, specify the label with a whole number using the syntax <code class="docutils literal notranslate"><span class="pre">[number]_</span></code></p>
+<p>The following example creates a manual footnote with the label “1”.</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>Loremipsum dolor sit amet [1]_.
+
+.. [1] This is a manual footnote.
+</pre></div>
+</div>
+<p>The footnote reference is displayed as <a class="footnote-reference brackets" href="#id5" id="id2">1</a>.</p>
+</div>
+<div class="section" id="autonumber-footnotes">
+<h3>Autonumber footnotes<a class="headerlink" href="#autonumber-footnotes" title="Permalink to this headline">¶</a></h3>
+<p>To create an autonumber footnote, specify the label with a single “#” character using the syntax <code class="docutils literal notranslate"><span class="pre">[#]_</span></code></p>
+<p>The following example creates an autonumber footnote. The number used depends on the type and location of other footnotes in the document.</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>Loremipsum dolor sit amet [#]_.
+
+.. [#] This is an autonumber footnote.
+</pre></div>
+</div>
+<p>The footnote reference is displayed as <a class="footnote-reference brackets" href="#id6" id="id3">2</a>.</p>
+</div>
+<div class="section" id="autonumber-label-footnotes">
+<h3>Autonumber-label footnotes<a class="headerlink" href="#autonumber-label-footnotes" title="Permalink to this headline">¶</a></h3>
+<p>To create an autonumber-label footnote, specify the label with a single “#” character followed by a simple reference name using the syntax <code class="docutils literal notranslate"><span class="pre">[#name]_</span></code>.</p>
+<p>The following example creates an autonumber-label footnote. The number used depends on the type and location of other footnotes in the document.</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>Loremipsum dolor sit amet [#MyFootnote]_.
+
+.. [#MyFootNote] This is an autonumber-label footnote.
+</pre></div>
+</div>
+<p>The footnote reference is displayed as <a class="footnote-reference brackets" href="#myfootnote" id="id4">3</a>.</p>
+</div>
+<div class="section" id="footnote-rubric">
+<h3>Footnote rubric<a class="headerlink" href="#footnote-rubric" title="Permalink to this headline">¶</a></h3>
+<p>Although footnotes can appear anywhere in your document, it is common to add them at the bottom of the document
+after a “Footnotes” rubric.</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>.. rubric:: Footnotes
+.. [1] This is a manual footnote.
+.. [#] This is an autonumber footnote.
+.. [#MyFootNote] This is an autonumber-label footnote.
+</pre></div>
+</div>
+<p>The “Footnotes” rubric and footnotes are shown below.</p>
+<p class="rubric">Footnotes</p>
+<dl class="footnote brackets">
+<dt class="label" id="id5"><span class="brackets"><a class="fn-backref" href="#id2">1</a></span></dt>
+<dd><p>This is a manual footnote.</p>
+</dd>
+<dt class="label" id="id6"><span class="brackets"><a class="fn-backref" href="#id3">2</a></span></dt>
+<dd><p>This is an autonumber footnote.</p>
+</dd>
+<dt class="label" id="myfootnote"><span class="brackets"><a class="fn-backref" href="#id4">3</a></span></dt>
+<dd><p>This is an autonumber-label footnote.</p>
+</dd>
+</dl>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The autonumber footnotes start at “2” because the manual footnote already uses “1”. Also, the number order depends on the
+footnote order, and not the reference order.</p>
+</div>
+</div>
+</div>
+<div class="section" id="citations">
+<h2>Citations<a class="headerlink" href="#citations" title="Permalink to this headline">¶</a></h2>
+<p>Citations are identical to footnotes except they use only alphanumeric labels such as <code class="docutils literal notranslate"><span class="pre">[note]</span></code> or <code class="docutils literal notranslate"><span class="pre">[GVR2001]</span></code>.
+Citation labels are simple reference names (case-insensitive single words consisting of alphanumerics plus internal hyphens,
+underscores, and periods; no whitespace). Citations may be rendered separately and differently from footnotes.</p>
+<p>A citation reference, rubric, and definition are shown below.</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>Here is a citation reference [CIT2002]_.
+
+.. rubric:: Citations
+
+.. [CIT2002] This is the citation. It&#39;s just like a footnote, except the label is alphanumeric.
+</pre></div>
+</div>
+<p>The citation reference is displayed as <a class="reference internal" href="#cit2002" id="id7"><span>[CIT2002]</span></a>.</p>
+<p>The “Citations” rubric and citation definition are shown below.</p>
+<p class="rubric">Citations</p>
+<dl class="citation">
+<dt class="label" id="cit2002"><span class="brackets"><a class="fn-backref" href="#id7">CIT2002</a></span></dt>
+<dd><p>This is the citation. It’s just like a footnote, except the label is alphanumeric.</p>
+</dd>
+</dl>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="lists.html" class="btn btn-neutral float-right" title="Lists" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="hyperlinks.html" class="btn btn-neutral float-left" title="Hyperlinks" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2020, D. J. DeAngelis
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

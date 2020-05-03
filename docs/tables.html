@@ -82,20 +82,15 @@
             
               <p class="caption"><span class="caption-text">Contents:</span></p>
 <ul class="current">
-<li class="toctree-l1"><a class="reference internal" href="sections.html">Sections and Transitions</a></li>
-<li class="toctree-l1"><a class="reference internal" href="paragraphs.html">Paragraphs</a></li>
-<li class="toctree-l1"><a class="reference internal" href="inlinetext.html">Inline markup</a></li>
+<li class="toctree-l1"><a class="reference internal" href="sections.html">Sections</a></li>
+<li class="toctree-l1"><a class="reference internal" href="paragraphs.html">Blocks</a></li>
+<li class="toctree-l1"><a class="reference internal" href="inlinetext.html">Inline Markup</a></li>
 <li class="toctree-l1"><a class="reference internal" href="hyperlinks.html">Hyperlinks</a></li>
+<li class="toctree-l1"><a class="reference internal" href="footnotes.html">Footnotes and Citations</a></li>
 <li class="toctree-l1"><a class="reference internal" href="lists.html">Lists</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">Tables</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#simple-table">Simple table</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#examples">Examples</a></li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="#grid-table">Grid table</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#id3">Examples</a></li>
-</ul>
-</li>
+<li class="toctree-l2"><a class="reference internal" href="#simple-tables">Simple tables</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#grid-tables">Grid tables</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="images.html">Images and Figures</a></li>
@@ -166,9 +161,10 @@
             
   <div class="section" id="tables">
 <h1>Tables<a class="headerlink" href="#tables" title="Permalink to this headline">¶</a></h1>
-<div class="section" id="simple-table">
-<h2>Simple table<a class="headerlink" href="#simple-table" title="Permalink to this headline">¶</a></h2>
-<p>A <a class="reference external" href="https://docutils.sourceforge.io/docs/ref/rst/restructuredtext.html#simple-tables">simple table</a> is compact and easy to construct, and is best suited for displaying simple data sets. To consuct a simple table:</p>
+<div class="section" id="simple-tables">
+<h2>Simple tables<a class="headerlink" href="#simple-tables" title="Permalink to this headline">¶</a></h2>
+<p><a class="reference external" href="https://docutils.sourceforge.io/docs/ref/rst/restructuredtext.html#simple-tables">Simple tables</a> are compact and easy to construct, and are best suited for displaying simple data sets.</p>
+<p>To consuct a simple table:</p>
 <ul>
 <li><p>Define the horizontal borders with the <code class="docutils literal notranslate"><span class="pre">=</span></code> and <code class="docutils literal notranslate"><span class="pre">-</span></code> characters.</p>
 <blockquote>
@@ -182,8 +178,6 @@
 <li><p>Blank lines are required before and after the table.</p></li>
 <li><p>Left edges should align with the left edge of the preceding text blocks. If indented, the table is considered to be part of a block quote.</p></li>
 </ul>
-<div class="section" id="examples">
-<h3>Examples<a class="headerlink" href="#examples" title="Permalink to this headline">¶</a></h3>
 <p>The simple table shown below includes three columns, one header row, and four body rows.</p>
 <div class="highlight-none notranslate"><div class="highlight"><pre><span></span>=====  =====  =======
   A      B    A and B
@@ -276,10 +270,10 @@ True   True   True
 </tbody>
 </table>
 </div>
-</div>
-<div class="section" id="grid-table">
-<h2>Grid table<a class="headerlink" href="#grid-table" title="Permalink to this headline">¶</a></h2>
-<p>A <a class="reference external" href="https://docutils.sourceforge.io/docs/ref/rst/restructuredtext.html#grid-tables">grid table</a> provides a complete table representation via grid-like “ASCII art”. Grid tables allow arbitrary cell contents, and both row and column spans. However, grid tables can be cumbersome to produce, especially for simple data sets. To construct a grid table:</p>
+<div class="section" id="grid-tables">
+<h2>Grid tables<a class="headerlink" href="#grid-tables" title="Permalink to this headline">¶</a></h2>
+<p><a class="reference external" href="https://docutils.sourceforge.io/docs/ref/rst/restructuredtext.html#grid-tables">Grid tables</a> provide a complete table representation via grid-like “ASCII art”. Grid tables allow arbitrary cell contents, and both row and column spans. However, grid tables can be cumbersome to produce, especially for simple data sets.</p>
+<p>To construct a grid table:</p>
 <ul>
 <li><p>Define the grid using the  <code class="docutils literal notranslate"><span class="pre">-</span></code>, <code class="docutils literal notranslate"><span class="pre">=</span></code>, <code class="docutils literal notranslate"><span class="pre">|</span></code>, and <code class="docutils literal notranslate"><span class="pre">+</span></code> characters.</p>
 <blockquote>
@@ -294,13 +288,11 @@ True   True   True
 <li><p>Blank lines are required before and after the table.</p></li>
 <li><p>Left edges should align with the left edge of the preceding text blocks. If indented, the table is considered to be part of a block quote.</p></li>
 </ul>
-<div class="section" id="id3">
-<h3>Examples<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h3>
 <p>In the simplest case, a grid table is not required to have headers.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">+-----------+-----------+</span>
-<span class="o">|</span> <span class="n">cell</span> <span class="mi">1</span><span class="p">,</span><span class="mi">1</span>  <span class="o">|</span> <span class="n">cell</span> <span class="mi">1</span><span class="p">,</span><span class="mi">2</span>  <span class="o">|</span>
+<span class="o">|</span>     <span class="n">A</span>     <span class="o">|</span>     <span class="n">B</span>     <span class="o">|</span>
 <span class="o">+-----------+-----------+</span>
-<span class="o">|</span> <span class="n">cell</span> <span class="mi">2</span><span class="p">,</span><span class="mi">1</span>  <span class="o">|</span> <span class="n">cell</span> <span class="mi">2</span><span class="p">,</span><span class="mi">2</span>  <span class="o">|</span>
+<span class="o">|</span>     <span class="n">C</span>     <span class="o">|</span>     <span class="n">D</span>     <span class="o">|</span>
 <span class="o">+-----------+-----------+</span>
 </pre></div>
 </div>
@@ -311,11 +303,11 @@ True   True   True
 <col style="width: 50%" />
 </colgroup>
 <tbody>
-<tr class="row-odd"><td><p>cell 1,1</p></td>
-<td><p>cell 1,2</p></td>
+<tr class="row-odd"><td><p>A</p></td>
+<td><p>B</p></td>
 </tr>
-<tr class="row-even"><td><p>cell 2,1</p></td>
-<td><p>cell 2,2</p></td>
+<tr class="row-even"><td><p>C</p></td>
+<td><p>D</p></td>
 </tr>
 </tbody>
 </table>
@@ -385,8 +377,8 @@ span rows.</p></td>
 </pre></div>
 </div>
 <p>It is rendered as</p>
-<table class="docutils align-default" id="id4">
-<caption><span class="caption-text">A grid table representation</span><a class="headerlink" href="#id4" title="Permalink to this table">¶</a></caption>
+<table class="docutils align-default" id="id3">
+<caption><span class="caption-text">A grid table representation</span><a class="headerlink" href="#id3" title="Permalink to this table">¶</a></caption>
 <colgroup>
 <col style="width: 34%" />
 <col style="width: 34%" />
@@ -420,7 +412,6 @@ span rows.</p></td>
 </tr>
 </tbody>
 </table>
-</div>
 </div>
 </div>
 

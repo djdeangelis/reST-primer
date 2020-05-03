@@ -1,7 +1,7 @@
 Admonitions
 ===========
 `Admonitions <https://docutils.sourceforge.io/0.3/spec/rst/directives.html#admonitions>`_ are specially marked topics that can appear 
-anywhere in your document as an ordinary body element. Any text immediately following the directive indicator (on the same line or indented 
+anywhere in a document as an ordinary body element. Any text immediately following the directive indicator (on the same line or indented 
 on following lines) is interpreted as a directive block and is parsed for normal body elements. Typically, an admonition is rendered as an 
 offset block in a document, sometimes outlined or shaded, with a title matching the admonition type.
 
@@ -41,39 +41,44 @@ It is rendered as
    Notes can have more than one paragraph. Successive paragraphs mustindent to 
    the same level as the rest of the note.
 
-The following ``warning`` admonition directive contains an unordered list. ::
+The following ``warning`` admonition directive contains multiple paragraphs. ::
 
-	.. warning:: Use a warning for information the user must understand to avoid negative consequences.
-		
-	   You can include any body element in the admonition such as an unordered list.
+  .. warning:: Use a warning for information the user must understand to avoid negative consequences.
 
-	   * First list item.
-	   * Second list item.
+     You can include any body element in the admonition such as a bulleted list.
+
+     * First list item.
+     * Second list item.
+
+     You can also include inlie markup such as *italics*, **bold**, and ``literal``.
 
 It is rendered as
 
 .. warning:: Use a warning for information the user must understand to avoid negative consequences.
-		
-   You can include any body element in the admonition such as an unordered list.
+
+   You can include any body element in the admonition such as a bulleted list.
 
    * First list item.
    * Second list item.
 
+   You can also include inlie markup such as *italics*, **bold**, and ``literal``.
+
+
 Generic admonitions
 *******************
-You can create a `generic admonition <https://docutils.sourceforge.io/0.3/spec/rst/directives.html#generic-admonition>`_ with the ``admonition`` directive. The title of the admonition is specified after the directive. 
+You can create a `generic admonition <https://docutils.sourceforge.io/0.3/spec/rst/directives.html#generic-admonition>`_ with the ``admonition`` directive. The title of the admonition is specified immediately after the directive and preceded by a space. 
 
-The following generic admonition it titled "RTFM". ::
+The following generic admonition is titled "RTFM". ::
 
 	.. admonition:: RTFM
 
-   	   Read the flipping manual!
+   	   Read the funtastic manual!
 
 It is rendered as
 
 .. admonition:: RTFM
 
-   Read the flipping manual!
+   Read the funtastic manual!
 
 The admonition title is used as a class attribute value after being converted into a valid identifier form (down cased, non-alphanumeric 
 characters converted to single hyphens, and "admonition-" prefixed) as illustrated by the following document tree pseudo-XML ::
@@ -83,7 +88,7 @@ characters converted to single hyphens, and "admonition-" prefixed) as illustrat
             <title>
                 RTFM
             <paragraph>
-                You should read the flipping manual!
+                You should read the funtastic manual!
 
 
 You can then include the class in the admonition using the ``:class:`` specifier.

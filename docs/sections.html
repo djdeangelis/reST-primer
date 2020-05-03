@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Sections and Transitions &mdash; reStructuredText Primer 0.0.1 documentation</title>
+  <title>Sections &mdash; reStructuredText Primer 0.0.1 documentation</title>
   
 
   
@@ -35,7 +35,7 @@
   <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Paragraphs" href="paragraphs.html" />
+    <link rel="next" title="Blocks" href="paragraphs.html" />
     <link rel="prev" title="Welcome to the reStructuredText Primer!" href="index.html" /> 
 </head>
 
@@ -82,14 +82,11 @@
             
               <p class="caption"><span class="caption-text">Contents:</span></p>
 <ul class="current">
-<li class="toctree-l1 current"><a class="current reference internal" href="#">Sections and Transitions</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#sections">Sections</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#transitions">Transitions</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="paragraphs.html">Paragraphs</a></li>
-<li class="toctree-l1"><a class="reference internal" href="inlinetext.html">Inline markup</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Sections</a></li>
+<li class="toctree-l1"><a class="reference internal" href="paragraphs.html">Blocks</a></li>
+<li class="toctree-l1"><a class="reference internal" href="inlinetext.html">Inline Markup</a></li>
 <li class="toctree-l1"><a class="reference internal" href="hyperlinks.html">Hyperlinks</a></li>
+<li class="toctree-l1"><a class="reference internal" href="footnotes.html">Footnotes and Citations</a></li>
 <li class="toctree-l1"><a class="reference internal" href="lists.html">Lists</a></li>
 <li class="toctree-l1"><a class="reference internal" href="tables.html">Tables</a></li>
 <li class="toctree-l1"><a class="reference internal" href="images.html">Images and Figures</a></li>
@@ -139,7 +136,7 @@
     
       <li><a href="index.html">Docs</a> &raquo;</li>
         
-      <li>Sections and Transitions</li>
+      <li>Sections</li>
     
     
       <li class="wy-breadcrumbs-aside">
@@ -158,10 +155,8 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="sections-and-transitions">
-<h1>Sections and Transitions<a class="headerlink" href="#sections-and-transitions" title="Permalink to this headline">¶</a></h1>
-<div class="section" id="sections">
-<h2>Sections<a class="headerlink" href="#sections" title="Permalink to this headline">¶</a></h2>
+  <div class="section" id="sections">
+<h1>Sections<a class="headerlink" href="#sections" title="Permalink to this headline">¶</a></h1>
 <p><a class="reference external" href="https://docutils.sourceforge.io/docs/ref/rst/restructuredtext.html#sections">Sections</a> are identified through their titles, which are marked up with adornment characters.</p>
 <ul class="simple">
 <li><p>Many adornment characters are supported. However, the following characters are recommended <code class="docutils literal notranslate"><span class="pre">=</span></code>, <code class="docutils literal notranslate"><span class="pre">-</span></code>, <code class="docutils literal notranslate"><span class="pre">_</span></code>, <code class="docutils literal notranslate"><span class="pre">*</span></code>, <code class="docutils literal notranslate"><span class="pre">+</span></code>, and <code class="docutils literal notranslate"><span class="pre">#</span></code>.</p></li>
@@ -174,7 +169,7 @@
 <ul class="simple">
 <li><p>The order enforced will be the order as encountered.</p></li>
 <li><p>The first style encountered will be an outermost title (e.g. HTML <code class="docutils literal notranslate"><span class="pre">&lt;h1&gt;</span></code>), the second style will be a subtitle, the third will be a subsubtitle, and so on.</p></li>
-<li><p>A document should consistently use the established section title hierarchy.</p></li>
+<li><p>Documents should consistently use the established section title hierarchy.</p></li>
 </ul>
 <p>Four section levels are defined below using only underline adornment</p>
 <div class="highlight-none notranslate"><div class="highlight"><pre><span></span>Section 1
@@ -207,36 +202,6 @@ Section 4
 </pre></div>
 </div>
 </div>
-<div class="section" id="transitions">
-<h2>Transitions<a class="headerlink" href="#transitions" title="Permalink to this headline">¶</a></h2>
-<p><a class="reference external" href="https://docutils.sourceforge.io/docs/ref/rst/restructuredtext.html#transitions">Transitions</a> separate other body elements and can be used to mark
-text divisions or signal changes in subject, time, point of view, or emphasis.</p>
-<p>To create a transition:</p>
-<ul>
-<li><p>Type a horizontal line of 4 or more repeated characters.</p>
-<blockquote>
-<div><ul class="simple">
-<li><p>The available characters are the same ones used for section titles.</p></li>
-<li><p>All characters produce the same result; pick one and use it consistently.</p></li>
-</ul>
-</div></blockquote>
-</li>
-<li><p>Include a blank line before and after the transition characters.</p></li>
-<li><p>Do not begin or end a section or document with a transition, and do not specify adjacent transitions.</p></li>
-</ul>
-<p>The following characters all produce a transition.</p>
-<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>----
-
-====
-
-****
-</pre></div>
-</div>
-<p>The transition is rendered as a HTML <code class="docutils literal notranslate"><span class="pre">&lt;hr&gt;</span></code> element.</p>
-<hr class="docutils" />
-<p>Remember, you can’t end a document with a transition!</p>
-</div>
-</div>
 
 
            </div>
@@ -246,7 +211,7 @@ text divisions or signal changes in subject, time, point of view, or emphasis.</
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="paragraphs.html" class="btn btn-neutral float-right" title="Paragraphs" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="paragraphs.html" class="btn btn-neutral float-right" title="Blocks" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
         <a href="index.html" class="btn btn-neutral float-left" title="Welcome to the reStructuredText Primer!" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>

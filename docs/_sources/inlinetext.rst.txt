@@ -3,35 +3,51 @@
 Inline Markup
 =============
 
-`Inline markup <https://docutils.sourceforge.io/docs/ref/rst/restructuredtext.html#inline-markup>`_ allows words and phrases within text to have character 
-styles (e.g. italics and boldface) and functionality (e.g. hyperlinks). 
+`Inline markup <https://docutils.sourceforge.io/docs/ref/rst/restructuredtext.html#inline-markup>`_ allows characters, words, and phrases 
+to have styles such as italics and bold, and functionality such as hyperlinks. reStructuredText uses special markup characters such as 
+the asterisk ``*``, underscore ``_``, and backslash ``\`` to apply inline styles.
 
-Be aware of some restrictions of this markup:
+The following restrictions apply to inline markup:
 
-* It may not be nested.
-* Content may not start or end with whitespace: \* text\* is wrong.
+* It cannot be nested. For example, you cannot italicise a bold phrase.
+* The markup content cannot start or end with whitespace.
 
+There are nine inline markup constructs. Five common constructs are given below.
 
-There are nine inline markup constructs. Four common constructs are given below.
-
-======================  ===================  ======================================
-Text                    Rendered result      Descripion
-======================  ===================  ======================================
-\*emphasis\*            *emphasis*           Normally rendered as italics.
-----------------------  -------------------  --------------------------------------
-\*\*strong\*\*          **strong**           Normally rendered as bold.
-----------------------  -------------------  --------------------------------------
-\`\`literal\`\`         ``literal``          Normally rendered as monospaced text and typically used for code samples
-----------------------  -------------------  --------------------------------------
-\`phrase reference\`\_  `Inline markup`_     A multi-word hyperlink reference
-======================  ===================  ======================================
+======================  ======================  ======================================
+Construct               Display                 Description
+======================  ======================  ======================================
+\*emphasis\*            *emphasis*              Normally rendered as italics.
+----------------------  ----------------------  --------------------------------------
+\*\*strong\*\*          **strong**              Normally rendered as bold.
+----------------------  ----------------------  --------------------------------------
+\`\`literal\`\`         ``literal``             Normally rendered as monospaced text
+----------------------  ----------------------  --------------------------------------
+reference\_             backslash_              A hyperlink reference
+----------------------  ----------------------  --------------------------------------
+\`phrase reference\`\_  `Escaping characters`_  A multi-word hyperlink reference
+======================  ======================  ======================================
 
 Escaping characters
 -------------------
-If you want to display a character with its normal meaning, which would otherwise create inline markup, you must escape the character by prepending it 
-with a backslash (\\).
+To override the special meaning of reStructuredText markup characters and display the literal characters, 
+prepend them with a backslash ``\``. Using a backslash in this way is called 
+`escaping characters <https://docutils.sourceforge.io/docs/ref/rst/restructuredtext.html#escaping-mechanism>`_.
 
-For example, to show how to specify the appropriate markup characters for the emphasis and strong constructs dsplayed above, you include a backslash before each markup character.
+Escape sequences for various markup characters are shown below.
 
-* Emphasis construct - Type \\\*emphasis\\\*, which renders as \*emphasis\* instead of *emphasis*. 
-* Strong construct - Type \\\*\\\*strong\\\*\\\*, which renders as \*\*strong\*\* instead of **strong**.
+=================================  =======================  ==========================================
+Escape sequence                    Display                   Description
+=================================  =======================  ==========================================
+\\ \\                              \\                       Display a literal backslash by escaping ``\``
+---------------------------------  -----------------------  ------------------------------------------
+reference\\_ 			           reference\_              Display reference syntax by escaping ``_``
+---------------------------------  -----------------------  ------------------------------------------
+\\\*emphasis\\\*	               \*emphasis\*             Display emphasis syntax by escaping each ``*``
+---------------------------------  -----------------------  ------------------------------------------
+\\\*\\\*strong\\\*\\\*             \*\*strong\*\*           Display strong syntax by escaping each ``*``
+=================================  =======================  ==========================================
+
+.. note:: As shown in the Display column, escape backslashes and spaces (not the literal characters) are excluded from the processed document.
+
+.. _backslash: 

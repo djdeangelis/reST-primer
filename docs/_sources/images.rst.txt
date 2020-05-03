@@ -7,12 +7,13 @@ The `image directive <https://docutils.sourceforge.io/docs/ref/rst/directives.ht
 
 The following image options are supported:
 
-* alt - Alternate text.
-* height - The height of the image in pixels, used to reserve space or scale the image vertically.
-* width - The width of the image in pixels, used to reserve space or scale the image horizontally.
-* scale - The uniform scaling factor of the image. "100" means full-size.
-* align - The alignment of the image, equivalent to the HTML <img> tag's "align" attribute. The values ``top``, ``middle``, and ``bottom`` control the vertical alignment relative to the text baseline. The values ``left``, ``center``, and ``right`` control the horizontal alignment, which allows the image to float so that text can flow around it. 
-* class - Set a class attribute value on the image element.
+* ``alt`` - Alternate text.
+* ``height`` - The height of the image in pixels, used to reserve space or scale the image vertically.
+* ``width`` - The width of the image in pixels, used to reserve space or scale the image horizontally.
+* ``scale`` - The uniform scaling factor of the image. "100" means full-size.
+* ``class`` - Set a class attribute value on the image element.
+* ``align`` - The alignment of the image. The values ``top``, ``middle``, and ``bottom`` control the vertical alignment relative to the text baseline. 
+  The values ``left``, ``center``, and ``right`` control the horizontal alignment, which allows the image to float so that text can flow around it. 
 
 The directive below displays an image from a local Git repository's ``_static`` directory and specifies alternate text. ::
 
@@ -31,18 +32,18 @@ The `figure directive <https://docutils.sourceforge.io/docs/ref/rst/directives.h
 
 .. note:: A figure consists of image data (including image options), an optional caption (a single paragraph), and an optional legend (arbitrary body elements).
 
-The ``figure`` directive supports all of the options of the ``image`` directive and the following additonal options:
+The ``figure`` directive supports all the options of the ``image`` directive and these additonal options:
 
-* figwidth -  The width of the figure in pixels, to limit the horizontal space used. A special value of "image" is allowed, in which case the included image's actual width is used.
-* figclass - Set a "class" attribute value on the figure element.
+* ``figwidth`` -  The width of the figure in pixels, to limit the horizontal space used. A special value of "image" is allowed, in which case the included image's actual width is used.
+* ``figclass`` - Set a "class" attribute value on the figure element.
 
 
-The directive below displays an image from a local Git repository's ``_static`` directory, scales the image to 50%, aligns it to the right, and specifies alternate text. Additonally, a caption and legend are specified. ::
+The directive below displays an image from a local Git repository's ``_static`` directory, scales the image to 50%, aligns it to the right, and specifies alternate text. Additonally, a caption is specified. ::
 
 	.. figure:: /_static/mandala.jpg
 		:scale: 50
 		:align: right
-		:alt: Mandala   
+		:alt: Mandala
 
  		The mandala has various interpretations.
 
@@ -56,4 +57,6 @@ The image is displayed below. Note that since the image is floated right, the te
    The mandala has various 
    interpretations.
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin lobortis risus ullamcorper, tincidunt nibh sed, cursus mauris. Pellentesque ultrices mattis lectus efficitur laoreet. Aliquam non dapibus ex, eu dictum sapien. Duis id eros quis eros placerat tincidunt. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Phasellus ac pharetra justo. Mauris in maximus augue. Integer scelerisque varius nisl, nec pharetra lorem fermentum convallis. Proin tempus turpis sapien, in commodo nisi ornare eget. Vestibulum feugiat magna sed dolor tempor condimentum.
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin lobortis risus ullamcorper, tincidunt nibh sed, cursus mauris. Pellentesque ultrices mattis lectus efficitur laoreet. Aliquam non dapibus ex, eu dictum sapien. Duis id eros quis eros placerat tincidunt. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Phasellus ac pharetra justo. Mauris in maximus augue. Integer scelerisque varius nisl, nec pharetra lorem fermentum convallis. Proin tempus turpis sapien, in commodo nisi ornare eget. Vestibulum feugiat magna sed dolor tempor.
+
+Donec imperdiet nisl diam, at ultricies elit blandit eu. Nam hendrerit urna in enim ullamcorper, id pretium sem vulputate. Nullam consectetur leo augue, eget mattis metus placerat eu.

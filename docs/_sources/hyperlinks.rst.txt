@@ -9,8 +9,8 @@ The simplest way to create an external link is to specify just the URI using the
 
 The link is rendered as `<https://docutils.sourceforge.io/rst.html>`_.
 
-The full URI text may be hard for readers to parse and not very meaningful. You can create an external link 
-name of your choosing using the syntax ```link name <URI>`_``. ::
+The full URI text may be long and hard for readers to parse. Instead, you can create an external link 
+name using the syntax ```link name <URI>`_``. ::
 
 	`reStructuredText home page <https://docutils.sourceforge.io/rst.html>`_ 
 

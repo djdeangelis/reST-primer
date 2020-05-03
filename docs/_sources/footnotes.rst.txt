@@ -1,0 +1,100 @@
+Footnotes and Citations
+=======================
+
+Footnotes
+---------
+`Footnotes <https://docutils.sourceforge.io/docs/ref/rst/restructuredtext.html#footnotes>`_ are a way to include sources, notes, 
+and other ancillary information in a document. You can create three main types of footnotes: manual, autonumber, and autonumber-label.
+
+Each footnote has two parts:
+
+* **A reference** - A footnote reference links to the footnote definition, and is specified using the syntax ``[label]_``. 
+  The label depends on the footnote type.
+* **A definition** - A footnote definition consists of an explicit markup start (".. "), a label, and content (body elements). Each footnote 
+  automatically generates a hyperlink target pointing to itself. The text of the hyperlink target name is given by the footnote label.
+
+.. note:: Footnotes can appear anywhere in your document, and all three footnote types can appear in the same document.
+
+.. highlight:: none
+
+Manual footnotes
+****************
+To create a manual footnote, specify the label with a whole number using the syntax ``[number]_``
+
+The following example creates a manual footnote with the label "1". ::
+
+	Loremipsum dolor sit amet [1]_.
+
+	.. [1] This is a manual footnote.
+
+The footnote reference is displayed as [1]_.
+
+Autonumber footnotes
+********************
+To create an autonumber footnote, specify the label with a single "#" character using the syntax ``[#]_``
+
+The following example creates an autonumber footnote. The number used depends on the type and location of other footnotes in the document. ::
+
+	Loremipsum dolor sit amet [#]_.
+
+	.. [#] This is an autonumber footnote.
+
+The footnote reference is displayed as [#]_.
+
+Autonumber-label footnotes
+**************************
+To create an autonumber-label footnote, specify the label with a single "#" character followed by a simple reference name using the syntax ``[#name]_``.
+
+The following example creates an autonumber-label footnote. The number used depends on the type and location of other footnotes in the document. ::
+
+	Loremipsum dolor sit amet [#MyFootnote]_.
+
+	.. [#MyFootNote] This is an autonumber-label footnote.
+
+The footnote reference is displayed as [#MyFootnote]_.
+
+Footnote rubric
+***************
+Although footnotes can appear anywhere in your document, it is common to add them at the bottom of the document 
+after a “Footnotes” rubric. ::
+
+	.. rubric:: Footnotes
+	.. [1] This is a manual footnote.
+	.. [#] This is an autonumber footnote.
+	.. [#MyFootNote] This is an autonumber-label footnote.
+
+The "Footnotes" rubric and footnotes are shown below.
+
+.. rubric:: Footnotes
+.. [1] This is a manual footnote.
+.. [#] This is an autonumber footnote.
+.. [#MyFootNote] This is an autonumber-label footnote.
+
+.. note:: The autonumber footnotes start at "2" because the manual footnote already uses "1". Also, the number order depends on the 
+   footnote order, and not the reference order.
+
+Citations
+---------
+Citations are identical to footnotes except they use only alphanumeric labels such as ``[note]`` or ``[GVR2001]``. 
+Citation labels are simple reference names (case-insensitive single words consisting of alphanumerics plus internal hyphens, 
+underscores, and periods; no whitespace). Citations may be rendered separately and differently from footnotes.
+
+.. highlight:: none
+
+A citation reference, rubric, and definition are shown below. ::
+
+	Here is a citation reference [CIT2002]_.
+
+	.. rubric:: Citations
+
+	.. [CIT2002] This is the citation. It's just like a footnote, except the label is alphanumeric.
+
+The citation reference is displayed as [CIT2002]_.
+
+The "Citations" rubric and citation definition are shown below.
+
+.. rubric:: Citations
+
+.. [CIT2002] This is the citation. It's just like a footnote, except the label is alphanumeric.
+
+.. highlight:: default

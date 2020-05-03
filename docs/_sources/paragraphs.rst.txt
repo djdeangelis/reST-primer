@@ -1,6 +1,11 @@
+Blocks
+======
 Paragraphs
-==========
-`Paragraphs <https://docutils.sourceforge.io/docs/ref/rst/restructuredtext.html#paragraphs>`_ consist of blocks of left-aligned text with no markup indicating any other body element. Blank lines separate paragraphs from each other and from other body elements. Paragraphs may contain inline markup.
+----------
+`Paragraphs <https://docutils.sourceforge.io/docs/ref/rst/restructuredtext.html#paragraphs>`_ consist of blocks of left-aligned text with no markup indicating any other body element. 
+
+* Blank lines separate paragraphs from each other and from other body elements. 
+* Paragraphs may contain inline markup.
 
 .. highlight:: none
 
@@ -8,23 +13,132 @@ The two paragraphs shown below are separated by a blank line. ::
 
 	Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras dignissim auctor semper. 
 	Pellentesque dolor turpis, bibendum ac justo ac, sollicitudin condimentum elit. 
-	Sed suscipit vulputate ultricies.
 
 	In porta ipsum in ligula auctor, dictum gravida ante vulputate. Suspendisse id urna scelerisque, 
 	facilisis lacus at, consequat ipsum. Pellentesque nunc ipsum vestibulum luctus purus.
 
-You can add space between paragraphs by inserting empty lines with the pipe character (\|). ::
+You can insert empty lines between paragraphs with the pipe character (``|``). ::
 
 	Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras dignissim auctor semper. 
 	Pellentesque dolor turpis, bibendum ac justo ac, sollicitudin condimentum elit. 
-	Sed suscipit vulputate ultricies.
 	
 	|
 	
 	In porta ipsum in ligula auctor, dictum gravida ante vulputate. Suspendisse id urna scelerisque, 
 	facilisis lacus at, consequat ipsum. Pellentesque nunc ipsum vestibulum luctus purus.
 
+You can also create a block quote by indenting a text block. ::
+
+	Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras dignissim auctor semper. 
+	Pellentesque dolor turpis, bibendum ac justo ac, sollicitudin condimentum elit. 
+	
+		In porta ipsum in ligula auctor, dictum gravida ante vulputate. Suspendisse id urna scelerisque, 
+		facilisis lacus at, consequat ipsum. Pellentesque nunc ipsum vestibulum luctus purus.
+
 .. highlight:: default
 
+Literal blocks
+--------------
 
+`Literal blocks <https://docutils.sourceforge.io/docs/ref/rst/restructuredtext.html#literal-blocks>`_ are 
+defined by two colons (``::``) after a paragraph, and must either be indented or quoted as 
+described below.
 
+* The colons are included immediately after the paragraph, or on a separate line after the paragraph.
+* Blank lines are required before and after a literal block, but are not included as part of the block.
+* No markup is processed within a literal block, and it is typically rendered in a monospace font.
+* All whitespace (excluding minimum indentation for indented literal blocks) is preserved.
+
+Indented literal blocks
+***********************
+Indented literal blocks are indicated by indentation relative to the surrounding text. 
+
+* The minimum indentation will be removed from each line of an indented literal block. 
+* Blank lines are allowed between sections of indented text.
+* The literal block ends with the end of the indentation.
+
+For example, you can create an indented literal block by placing two colons preceded by a space immediately after a paragraph. ::
+
+	Include the colons immediately after the paragraph. ::
+
+		Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras dignissim auctor semper. 
+		Pellentesque dolor turpis, bibendum ac justo ac, sollicitudin condimentum elit. 
+
+You can also place the colons on a separate line after a paragraph.
+::
+
+	Include the colons on a separate line.
+	::
+
+		Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras dignissim auctor semper. 
+		Pellentesque dolor turpis, bibendum ac justo ac, sollicitudin condimentum elit. 
+
+Quoted literal blocks
+*********************
+Quoted literal blocks are unindented contiguous blocks of text where each line begins with the same quoting character. 
+
+* Supported quoting characters include ``>``, ``|``, ``"``, ``$``, and ``#`` among many others.
+* Quoting characters are preserved in the processed document.
+* The literal block ends with a blank line.
+
+.. highlight:: none
+
+For example, to create a quoted literal block with the ``>`` character. ::
+
+> Useful for quotes from email and
+> for Haskell literate programming.
+
+Line Blocks
+-----------
+Line blocks are groups of lines beginning with a vertical bar (``|``) character. They are useful for addresses, verse, and adornment-free lists. 
+
+* Each vertical bar indicates a new line, so line breaks are preserved.
+* Initial indents are also preserved, which produces a nested structure.
+* Inline markup is supported.
+* Continuation lines are wrapped portions of long lines, and begin with a space in place of the vertical bar. 
+* A line block ends with a blank line.
+
+This following line block example illustrates indentation and inline markup. ::
+
+| Each new line begins with a
+| vertical bar (``|``).
+|     Line breaks and initial indents
+|     are preserved.
+
+which is rendered as
+
+| Each new line begins with a
+| vertical bar (``|``).
+|     Line breaks and initial indents
+|     are preserved.
+
+.. highlight:: default
+
+Transitions
+-----------
+`Transitions <https://docutils.sourceforge.io/docs/ref/rst/restructuredtext.html#transitions>`_ separate other body elements and can be used to mark 
+text divisions or signal changes in subject, time, point of view, or emphasis.
+
+To create a transition:
+
+* Type a horizontal line of 4 or more repeated characters. 
+
+	* The available characters are the same ones used for section titles.
+	* All characters produce the same result; pick one and use it consistently.
+
+* Include a blank line before and after the transition characters.
+* Do not begin or end a section or document with a transition, and do not specify adjacent transitions.
+
+The following characters all produce a transition. ::
+
+   ----		
+
+   ====
+
+   ****
+
+The transition is rendered as a HTML ``<hr>`` element.
+
+----
+
+Remember, you can't end a document with a transition!

@@ -1,7 +1,5 @@
-Sections and Transitions
-========================
-Sections
---------
+Sections 
+========
 `Sections <https://docutils.sourceforge.io/docs/ref/rst/restructuredtext.html#sections>`_ are identified through their titles, which are marked up with adornment characters.
 
 * Many adornment characters are supported. However, the following characters are recommended ``=``, ``-``, ``_``, ``*``, ``+``, and ``#``.
@@ -14,7 +12,7 @@ Rather than imposing a fixed number and order of section title adornment styles:
 
 * The order enforced will be the order as encountered. 
 * The first style encountered will be an outermost title (e.g. HTML ``<h1>``), the second style will be a subtitle, the third will be a subsubtitle, and so on.
-* A document should consistently use the established section title hierarchy.
+* Documents should consistently use the established section title hierarchy.
 
 .. highlight:: none
 
@@ -49,34 +47,3 @@ Four section levels are defined below using both overline and underline adornmen
 	---------
 
 .. highlight:: default
-
-Transitions
------------
-`Transitions <https://docutils.sourceforge.io/docs/ref/rst/restructuredtext.html#transitions>`_ separate other body elements and can be used to mark 
-text divisions or signal changes in subject, time, point of view, or emphasis.
-
-To create a transition:
-
-* Type a horizontal line of 4 or more repeated characters. 
-
-	* The available characters are the same ones used for section titles.
-	* All characters produce the same result; pick one and use it consistently.
-
-* Include a blank line before and after the transition characters.
-* Do not begin or end a section or document with a transition, and do not specify adjacent transitions.
-
-.. highlight:: none
-
-The following characters all produce a transition. ::
-
-   ----		
-
-   ====
-
-   ****
-
-The transition is rendered as a HTML ``<hr>`` element.
-
-----
-
-Remember, you can't end a document with a transition!

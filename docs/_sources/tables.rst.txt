@@ -1,9 +1,11 @@
 Tables
 ======
 
-Simple table
-------------
-A `simple table <https://docutils.sourceforge.io/docs/ref/rst/restructuredtext.html#simple-tables>`_ is compact and easy to construct, and is best suited for displaying simple data sets. To consuct a simple table:
+Simple tables
+-------------
+`Simple tables <https://docutils.sourceforge.io/docs/ref/rst/restructuredtext.html#simple-tables>`_ are compact and easy to construct, and are best suited for displaying simple data sets. 
+
+To consuct a simple table:
 
 * Define the horizontal borders with the ``=`` and ``-`` characters.
 
@@ -13,9 +15,6 @@ A `simple table <https://docutils.sourceforge.io/docs/ref/rst/restructuredtext.h
 * Regardless of spans, the top border must fully describe all table columns and there must be at least two columns.
 * Blank lines are required before and after the table. 
 * Left edges should align with the left edge of the preceding text blocks. If indented, the table is considered to be part of a block quote.
-
-Examples
-********
 
 .. highlight:: none
 
@@ -69,9 +68,11 @@ True   True   True
 
 .. highlight:: default
 
-Grid table
-----------
-A `grid table <https://docutils.sourceforge.io/docs/ref/rst/restructuredtext.html#grid-tables>`_ provides a complete table representation via grid-like "ASCII art". Grid tables allow arbitrary cell contents, and both row and column spans. However, grid tables can be cumbersome to produce, especially for simple data sets. To construct a grid table:
+Grid tables
+-----------
+`Grid tables <https://docutils.sourceforge.io/docs/ref/rst/restructuredtext.html#grid-tables>`_ provide a complete table representation via grid-like "ASCII art". Grid tables allow arbitrary cell contents, and both row and column spans. However, grid tables can be cumbersome to produce, especially for simple data sets. 
+
+To construct a grid table:
 
 * Define the grid using the  ``-``, ``=``, ``|``, and ``+`` characters. 
 
@@ -83,22 +84,20 @@ A `grid table <https://docutils.sourceforge.io/docs/ref/rst/restructuredtext.htm
 * Blank lines are required before and after the table. 
 * Left edges should align with the left edge of the preceding text blocks. If indented, the table is considered to be part of a block quote.
 
-Examples
-********
 In the simplest case, a grid table is not required to have headers. ::
 
 	+-----------+-----------+
-	| cell 1,1  | cell 1,2  |
+	|     A     |     B     |
 	+-----------+-----------+
-	| cell 2,1  | cell 2,2  |
+	|     C     |     D     |
 	+-----------+-----------+
 
 It is rendered as
 
 +-----------+-----------+
-| cell 1,1  | cell 1,2  |
+|     A     |     B     |
 +-----------+-----------+
-| cell 2,1  | cell 2,2  |
+|     C     |     D     |
 +-----------+-----------+
 
 The grid table shown below includes a heading row, 4 body rows, 3 columns, a column span, a row span, and a content block. ::

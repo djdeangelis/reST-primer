@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Paragraphs &mdash; reStructuredText Primer 0.0.1 documentation</title>
+  <title>Blocks &mdash; reStructuredText Primer 0.0.1 documentation</title>
   
 
   
@@ -35,8 +35,8 @@
   <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Inline markup" href="inlinetext.html" />
-    <link rel="prev" title="Sections and Transitions" href="sections.html" /> 
+    <link rel="next" title="Inline Markup" href="inlinetext.html" />
+    <link rel="prev" title="Sections" href="sections.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -82,10 +82,21 @@
             
               <p class="caption"><span class="caption-text">Contents:</span></p>
 <ul class="current">
-<li class="toctree-l1"><a class="reference internal" href="sections.html">Sections and Transitions</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">Paragraphs</a></li>
-<li class="toctree-l1"><a class="reference internal" href="inlinetext.html">Inline markup</a></li>
+<li class="toctree-l1"><a class="reference internal" href="sections.html">Sections</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Blocks</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#paragraphs">Paragraphs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#literal-blocks">Literal blocks</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#indented-literal-blocks">Indented literal blocks</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#quoted-literal-blocks">Quoted literal blocks</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#line-blocks">Line Blocks</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#transitions">Transitions</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="inlinetext.html">Inline Markup</a></li>
 <li class="toctree-l1"><a class="reference internal" href="hyperlinks.html">Hyperlinks</a></li>
+<li class="toctree-l1"><a class="reference internal" href="footnotes.html">Footnotes and Citations</a></li>
 <li class="toctree-l1"><a class="reference internal" href="lists.html">Lists</a></li>
 <li class="toctree-l1"><a class="reference internal" href="tables.html">Tables</a></li>
 <li class="toctree-l1"><a class="reference internal" href="images.html">Images and Figures</a></li>
@@ -135,7 +146,7 @@
     
       <li><a href="index.html">Docs</a> &raquo;</li>
         
-      <li>Paragraphs</li>
+      <li>Blocks</li>
     
     
       <li class="wy-breadcrumbs-aside">
@@ -154,28 +165,147 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="paragraphs">
-<h1>Paragraphs<a class="headerlink" href="#paragraphs" title="Permalink to this headline">¶</a></h1>
-<p><a class="reference external" href="https://docutils.sourceforge.io/docs/ref/rst/restructuredtext.html#paragraphs">Paragraphs</a> consist of blocks of left-aligned text with no markup indicating any other body element. Blank lines separate paragraphs from each other and from other body elements. Paragraphs may contain inline markup.</p>
+  <div class="section" id="blocks">
+<h1>Blocks<a class="headerlink" href="#blocks" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="paragraphs">
+<h2>Paragraphs<a class="headerlink" href="#paragraphs" title="Permalink to this headline">¶</a></h2>
+<p><a class="reference external" href="https://docutils.sourceforge.io/docs/ref/rst/restructuredtext.html#paragraphs">Paragraphs</a> consist of blocks of left-aligned text with no markup indicating any other body element.</p>
+<ul class="simple">
+<li><p>Blank lines separate paragraphs from each other and from other body elements.</p></li>
+<li><p>Paragraphs may contain inline markup.</p></li>
+</ul>
 <p>The two paragraphs shown below are separated by a blank line.</p>
 <div class="highlight-none notranslate"><div class="highlight"><pre><span></span>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras dignissim auctor semper.
 Pellentesque dolor turpis, bibendum ac justo ac, sollicitudin condimentum elit.
-Sed suscipit vulputate ultricies.
 
 In porta ipsum in ligula auctor, dictum gravida ante vulputate. Suspendisse id urna scelerisque,
 facilisis lacus at, consequat ipsum. Pellentesque nunc ipsum vestibulum luctus purus.
 </pre></div>
 </div>
-<p>You can add space between paragraphs by inserting empty lines with the pipe character (|).</p>
+<p>You can insert empty lines between paragraphs with the pipe character (<code class="docutils literal notranslate"><span class="pre">|</span></code>).</p>
 <div class="highlight-none notranslate"><div class="highlight"><pre><span></span>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras dignissim auctor semper.
 Pellentesque dolor turpis, bibendum ac justo ac, sollicitudin condimentum elit.
-Sed suscipit vulputate ultricies.
 
 |
 
 In porta ipsum in ligula auctor, dictum gravida ante vulputate. Suspendisse id urna scelerisque,
 facilisis lacus at, consequat ipsum. Pellentesque nunc ipsum vestibulum luctus purus.
 </pre></div>
+</div>
+<p>You can also create a block quote by indenting a text block.</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras dignissim auctor semper.
+Pellentesque dolor turpis, bibendum ac justo ac, sollicitudin condimentum elit.
+
+        In porta ipsum in ligula auctor, dictum gravida ante vulputate. Suspendisse id urna scelerisque,
+        facilisis lacus at, consequat ipsum. Pellentesque nunc ipsum vestibulum luctus purus.
+</pre></div>
+</div>
+</div>
+<div class="section" id="literal-blocks">
+<h2>Literal blocks<a class="headerlink" href="#literal-blocks" title="Permalink to this headline">¶</a></h2>
+<p><a class="reference external" href="https://docutils.sourceforge.io/docs/ref/rst/restructuredtext.html#literal-blocks">Literal blocks</a> are
+defined by two colons (<code class="docutils literal notranslate"><span class="pre">::</span></code>) after a paragraph, and must either be indented or quoted as
+described below.</p>
+<ul class="simple">
+<li><p>The colons are included immediately after the paragraph, or on a separate line after the paragraph.</p></li>
+<li><p>Blank lines are required before and after a literal block, but are not included as part of the block.</p></li>
+<li><p>No markup is processed within a literal block, and it is typically rendered in a monospace font.</p></li>
+<li><p>All whitespace (excluding minimum indentation for indented literal blocks) is preserved.</p></li>
+</ul>
+<div class="section" id="indented-literal-blocks">
+<h3>Indented literal blocks<a class="headerlink" href="#indented-literal-blocks" title="Permalink to this headline">¶</a></h3>
+<p>Indented literal blocks are indicated by indentation relative to the surrounding text.</p>
+<ul class="simple">
+<li><p>The minimum indentation will be removed from each line of an indented literal block.</p></li>
+<li><p>Blank lines are allowed between sections of indented text.</p></li>
+<li><p>The literal block ends with the end of the indentation.</p></li>
+</ul>
+<p>For example, you can create an indented literal block by placing two colons preceded by a space immediately after a paragraph.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Include</span> <span class="n">the</span> <span class="n">colons</span> <span class="n">immediately</span> <span class="n">after</span> <span class="n">the</span> <span class="n">paragraph</span><span class="o">.</span> <span class="p">::</span>
+
+        <span class="n">Lorem</span> <span class="n">ipsum</span> <span class="n">dolor</span> <span class="n">sit</span> <span class="n">amet</span><span class="p">,</span> <span class="n">consectetur</span> <span class="n">adipiscing</span> <span class="n">elit</span><span class="o">.</span> <span class="n">Cras</span> <span class="n">dignissim</span> <span class="n">auctor</span> <span class="n">semper</span><span class="o">.</span>
+        <span class="n">Pellentesque</span> <span class="n">dolor</span> <span class="n">turpis</span><span class="p">,</span> <span class="n">bibendum</span> <span class="n">ac</span> <span class="n">justo</span> <span class="n">ac</span><span class="p">,</span> <span class="n">sollicitudin</span> <span class="n">condimentum</span> <span class="n">elit</span><span class="o">.</span>
+</pre></div>
+</div>
+<p>You can also place the colons on a separate line after a paragraph.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Include</span> <span class="n">the</span> <span class="n">colons</span> <span class="n">on</span> <span class="n">a</span> <span class="n">separate</span> <span class="n">line</span><span class="o">.</span>
+<span class="p">::</span>
+
+        <span class="n">Lorem</span> <span class="n">ipsum</span> <span class="n">dolor</span> <span class="n">sit</span> <span class="n">amet</span><span class="p">,</span> <span class="n">consectetur</span> <span class="n">adipiscing</span> <span class="n">elit</span><span class="o">.</span> <span class="n">Cras</span> <span class="n">dignissim</span> <span class="n">auctor</span> <span class="n">semper</span><span class="o">.</span>
+        <span class="n">Pellentesque</span> <span class="n">dolor</span> <span class="n">turpis</span><span class="p">,</span> <span class="n">bibendum</span> <span class="n">ac</span> <span class="n">justo</span> <span class="n">ac</span><span class="p">,</span> <span class="n">sollicitudin</span> <span class="n">condimentum</span> <span class="n">elit</span><span class="o">.</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="quoted-literal-blocks">
+<h3>Quoted literal blocks<a class="headerlink" href="#quoted-literal-blocks" title="Permalink to this headline">¶</a></h3>
+<p>Quoted literal blocks are unindented contiguous blocks of text where each line begins with the same quoting character.</p>
+<ul class="simple">
+<li><p>Supported quoting characters include <code class="docutils literal notranslate"><span class="pre">&gt;</span></code>, <code class="docutils literal notranslate"><span class="pre">|</span></code>, <code class="docutils literal notranslate"><span class="pre">&quot;</span></code>, <code class="docutils literal notranslate"><span class="pre">$</span></code>, and <code class="docutils literal notranslate"><span class="pre">#</span></code> among many others.</p></li>
+<li><p>Quoting characters are preserved in the processed document.</p></li>
+<li><p>The literal block ends with a blank line.</p></li>
+</ul>
+<p>For example, to create a quoted literal block with the <code class="docutils literal notranslate"><span class="pre">&gt;</span></code> character.</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>&gt; Useful for quotes from email and
+&gt; for Haskell literate programming.
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="line-blocks">
+<h2>Line Blocks<a class="headerlink" href="#line-blocks" title="Permalink to this headline">¶</a></h2>
+<p>Line blocks are groups of lines beginning with a vertical bar (<code class="docutils literal notranslate"><span class="pre">|</span></code>) character. They are useful for addresses, verse, and adornment-free lists.</p>
+<ul class="simple">
+<li><p>Each vertical bar indicates a new line, so line breaks are preserved.</p></li>
+<li><p>Initial indents are also preserved, which produces a nested structure.</p></li>
+<li><p>Inline markup is supported.</p></li>
+<li><p>Continuation lines are wrapped portions of long lines, and begin with a space in place of the vertical bar.</p></li>
+<li><p>A line block ends with a blank line.</p></li>
+</ul>
+<p>This following line block example illustrates indentation and inline markup.</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>| Each new line begins with a
+| vertical bar (``|``).
+|     Line breaks and initial indents
+|     are preserved.
+</pre></div>
+</div>
+<p>which is rendered as</p>
+<div class="line-block">
+<div class="line">Each new line begins with a</div>
+<div class="line">vertical bar (<code class="docutils literal notranslate"><span class="pre">|</span></code>).</div>
+<div class="line-block">
+<div class="line">Line breaks and initial indents</div>
+<div class="line">are preserved.</div>
+</div>
+</div>
+</div>
+<div class="section" id="transitions">
+<h2>Transitions<a class="headerlink" href="#transitions" title="Permalink to this headline">¶</a></h2>
+<p><a class="reference external" href="https://docutils.sourceforge.io/docs/ref/rst/restructuredtext.html#transitions">Transitions</a> separate other body elements and can be used to mark
+text divisions or signal changes in subject, time, point of view, or emphasis.</p>
+<p>To create a transition:</p>
+<ul>
+<li><p>Type a horizontal line of 4 or more repeated characters.</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>The available characters are the same ones used for section titles.</p></li>
+<li><p>All characters produce the same result; pick one and use it consistently.</p></li>
+</ul>
+</div></blockquote>
+</li>
+<li><p>Include a blank line before and after the transition characters.</p></li>
+<li><p>Do not begin or end a section or document with a transition, and do not specify adjacent transitions.</p></li>
+</ul>
+<p>The following characters all produce a transition.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">----</span>
+
+<span class="o">====</span>
+
+<span class="o">****</span>
+</pre></div>
+</div>
+<p>The transition is rendered as a HTML <code class="docutils literal notranslate"><span class="pre">&lt;hr&gt;</span></code> element.</p>
+<hr class="docutils" />
+<p>Remember, you can’t end a document with a transition!</p>
 </div>
 </div>
 
@@ -187,10 +317,10 @@ facilisis lacus at, consequat ipsum. Pellentesque nunc ipsum vestibulum luctus p
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="inlinetext.html" class="btn btn-neutral float-right" title="Inline markup" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="inlinetext.html" class="btn btn-neutral float-right" title="Inline Markup" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="sections.html" class="btn btn-neutral float-left" title="Sections and Transitions" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="sections.html" class="btn btn-neutral float-left" title="Sections" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
